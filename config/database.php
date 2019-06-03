@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION', 'mongodb'),
 
     /*
     |--------------------------------------------------------------------------
@@ -37,14 +37,12 @@ return [
 
         'mongodb' => [
             'driver' => 'mongodb',
-            'host' => env('DB_HOST', 'localhost'),
-            'port' => env('DB_PORT', 27017),
-            'database' => env('proyecto'),
-            'username' => env(''),
-            'password' => env(''),
-            'options' => [
-                'database' => 'styde' // sets the authentication database required by mongo 3
-            ]
+            'host' => env('DB_HOST', 'ds161485.mlab.com'),
+            'port' => env('DB_PORT', '61485'),
+            'database' => env('heroku_86x3pld1'),
+            'username' => env('user'),
+            'password' => env('metalgearsolid4561'),
+            'options' => []
         ],
 
         'sqlite' => [

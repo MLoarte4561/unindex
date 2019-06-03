@@ -28,3 +28,7 @@ Route::get('/nosotros', function(){
 	return view('content.nosotros');
 })->name('nosotros');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
