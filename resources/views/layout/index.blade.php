@@ -73,7 +73,7 @@
                       <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Entrar</button>
                       </br>
 
-                      <h6 class="card-title text-center">¿No tienes cuenta? <a href="#"> Registrate</a></h66>
+                      <h6 class="card-title text-center" data-toggle="modal" data-target="#exampleModal2">¿No tienes cuenta? <a href="{{route('registro')}}">Registrate</a></h66>
                       <hr class="my-4">
 
                       <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google mr-2"></i>Acceder con Google</button>
@@ -110,6 +110,7 @@
       @yield('universidades')
       @yield('ranking')
       @yield('nosotros')
+
 
 
       <footer class="site-footer">

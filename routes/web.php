@@ -28,7 +28,9 @@ Route::get('/nosotros', function(){
 	return view('content.nosotros');
 })->name('nosotros');
 
+Route::get('registrarse','usuarioController@registro')->name('registro');
+
+Route::post('registrar','usuarioController@registrar')->name('registrar');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');

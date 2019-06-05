@@ -39,10 +39,10 @@ return [
             'driver' => 'mongodb',
             'host' => env('DB_HOST', 'ds161485.mlab.com'),
             'port' => env('DB_PORT', '61485'),
-            'database' => env('heroku_86x3pld1'),
-            'username' => env('user'),
-            'password' => env('metalgearsolid4561'),
-            'options' => []
+            'database' => env('DB_DATABASE','heroku_86x3pld1'),
+            'username' => env('DB_USERNAME','user'),
+            'password' => env('DB_PASSWORD','unindex1'),
+            'options' => ['database' => 'heroku_86x3pld1']
         ],
 
         'sqlite' => [
