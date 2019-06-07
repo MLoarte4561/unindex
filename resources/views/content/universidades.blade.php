@@ -35,73 +35,23 @@
             <div class="row">
 
 
+              @foreach($universidad as $uni)
               <div class="col-md-6 col-lg-6 mb-4 mb-lg-4">
                 <div class="h-entry">
-                  <img src="images/2.jpeg" alt="Image" class="img-fluid">
-                  <h2 class="font-size-regular"><a href="#">Universidad Nacional Mayor de San Marcos</a></h2>
-                  <div class="meta mb-4">Distrito: San Miguel <span class="mx-2">&bullet;</span> <span class="mx-2">&bullet;</span> <a href="#">Entrar</a></div>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eligendi nobis ea maiores sapiente veritatis reprehenderit suscipit quaerat rerum voluptatibus a eius.</p>
+                  <img src="{{$uni -> imagen}}" alt="Image" class="img-fluid">
+                  <h2 class="font-size-regular"><a href="#">{{$uni -> nombre}}</a></h2>
+                  <div class="meta mb-4">Distrito: {{$uni->distrito}} <span class="mx-2">&bullet;</span> <span class="mx-2">&bullet;</span> <a href="#">Entrar</a></div>
                 </div> 
               </div>
 
-              <div class="col-md-6 col-lg-6 mb-4 mb-lg-4">
-                  <div class="h-entry">
-                    <img src="images/2.jpeg" alt="Image" class="img-fluid">
-                    <h2 class="font-size-regular"><a href="#">Universidad Nacional Mayor de San Marcos</a></h2>
-                    <div class="meta mb-4">Distrito: San Miguel <span class="mx-2">&bullet;</span> <span class="mx-2">&bullet;</span> <a href="#">Entrar</a></div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eligendi nobis ea maiores sapiente veritatis reprehenderit suscipit quaerat rerum voluptatibus a eius.</p>
-                  </div> 
-                </div>
+              @endforeach
 
-
-              <div class="col-md-6 col-lg-6 mb-4 mb-lg-4">
-                <div class="h-entry">
-                  <img src="images/2.jpeg" alt="Image" class="img-fluid">
-                  <h2 class="font-size-regular"><a href="#">Universidad Nacional Mayor de San Marcos</a></h2>
-                  <div class="meta mb-4">Distrito: San Miguel <span class="mx-2">&bullet;</span> <span class="mx-2">&bullet;</span> <a href="#">Entrar</a></div>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eligendi nobis ea maiores sapiente veritatis reprehenderit suscipit quaerat rerum voluptatibus a eius.</p>
-                </div> 
-              </div>
-
-
-              <div class="col-md-6 col-lg-6 mb-4 mb-lg-4">
-                <div class="h-entry">
-                  <img src="images/2.jpeg" alt="Image" class="img-fluid">
-                  <h2 class="font-size-regular"><a href="#">Universidad Nacional Mayor de San Marcos</a></h2>
-                  <div class="meta mb-4">Distrito: San Miguel <span class="mx-2">&bullet;</span> <span class="mx-2">&bullet;</span> <a href="#">Entrar</a></div>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eligendi nobis ea maiores sapiente veritatis reprehenderit suscipit quaerat rerum voluptatibus a eius.</p>
-                </div> 
-              </div>
-
-
-              <div class="col-md-6 col-lg-6 mb-4 mb-lg-4">
-                <div class="h-entry">
-                  <img src="images/2.jpeg" alt="Image" class="img-fluid">
-                  <h2 class="font-size-regular"><a href="#">Universidad Nacional Mayor de San Marcos</a></h2>
-                  <div class="meta mb-4">Distrito: San Miguel <span class="mx-2">&bullet;</span> <span class="mx-2">&bullet;</span> <a href="#">Entrar</a></div>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eligendi nobis ea maiores sapiente veritatis reprehenderit suscipit quaerat rerum voluptatibus a eius.</p>
-                </div> 
-              </div>
-
-
-              <div class="col-md-6 col-lg-6 mb-4 mb-lg-4">
-                <div class="h-entry">
-                  <img src="images/2.jpeg" alt="Image" class="img-fluid">
-                  <h2 class="font-size-regular"><a href="#">Universidad Nacional Mayor de San Marcos</a></h2>
-                  <div class="meta mb-4">Distrito: San Miguel <span class="mx-2">&bullet;</span> <span class="mx-2">&bullet;</span> <a href="#">Entrar</a></div>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eligendi nobis ea maiores sapiente veritatis reprehenderit suscipit quaerat rerum voluptatibus a eius.</p>
-                </div> 
-              </div> 
 
 
             </div>
             <div class="col-12 text-center mt-5">
               <p class="custom-pagination">
-                <span>1</span>
-                <a href="#">2</a>
-                <a href="#">3</a>
-                <span>...</span>
-                <a href="#">20</a>
+                {{ $universidad->links() }}
               </p>
             </div>
           </div>

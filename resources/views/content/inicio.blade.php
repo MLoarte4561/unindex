@@ -27,28 +27,23 @@
                     <div class="col-lg-12 col-xl-3">
                         <div class="select-wrap">
                           <span class="icon icon-room"></span></span>
-                          <select class="form-control" name="" id="">
-                              <option value="">Distrito</option>
-                              <option value="">La Molina</option>
-                              <option value="">Ate</option>
-                              <option value="">Santa Anita</option>
-                              <option value="">Los Olivos</option>
-                              <option value="">Monterrico</option>
-                              <option value="">San Miguel</option>
+                          <select class="form-control dynamic" name="distrito" id="distrito" data-dependent="universidades">
+                              <option value="">--Distritos--</option>
+                              @foreach($universidades_fil as $universidade)
+                                <option value="{{ $universidade ->distrito }}">{{ $universidade ->distrito }}</option>
+                              @endforeach
                             </select>
                         </div>
+                        
                       </div>
                   
                   <div class="col-lg-12 col-xl-3 no-sm-border border-right">
                       <div class="select-wrap">
-                          <select class="form-control" name="" id="">
-                            <option value="">Universidad</option>
-                            <option value="">PUCP</option>
-                            <option value="">UNMSM</option>
-                            <option value="">UNI</option>
-                            <option value="">UPC</option>
-                            <option value="">USMP</option>
-                            <option value="">UTEC</option>
+                          <select class="form-control dynamic" name="universidades" id="universidades">
+                            <option value="" >--Universidades--</option>
+                            @foreach($nombres as $nombre)
+                              <option value="{{ $nombre ->nombre }}">{{ $nombre ->nombre }}</option></a>
+                            @endforeach
                           </select>
                         </div>
                     
@@ -79,101 +74,33 @@
         </div>
 
         <div class="row">
+          @foreach($universidades_mos as $mos)
           <div class="col-md-6 mb-4 mb-lg-0 col-lg-4">
             
             <div class="listing-item">
               <div class="listing-image">
-                <img src="images/2.jpg" alt="Image" class="img-fluid">
+                <img src="{{$mos -> imagen}}" alt="Image" class="img-fluid">
               </div>
               <div class="listing-item-content">
                 <a class="px-3 mb-3 category" href="#">Universidad</a>
-                <h2 class="mb-1"><a href="#">Universidad Nacional Mayor de San Marcos</a></h2>
-                <span class="address">Estudia en la Decana de America</span>
+                <h2 class="mb-1"><a href="#">{{$mos -> nombre}}</a></h2>
               </div>
             </div>
 
           </div>
-          <div class="col-md-6 mb-4 mb-lg-0 col-lg-4">
-            
-              <div class="listing-item">
-                  <div class="listing-image">
-                    <img src="images/2.jpg" alt="Image" class="img-fluid">
-                  </div>
-                  <div class="listing-item-content">
-                    <a class="px-3 mb-3 category" href="#">Universidad</a>
-                    <h2 class="mb-1"><a href="#">Universidad Peruana de Ciencias Aplicadas</a></h2>
-                    <span class="address">Estudia en la sede de Monterrico</span>
-                  </div>
-                </div>
-
-          </div>
-          <div class="col-md-6 mb-4 mb-lg-0 col-lg-4">
-            
-              <div class="listing-item">
-                  <div class="listing-image">
-                    <img src="images/2.jpg" alt="Image" class="img-fluid">
-                  </div>
-                  <div class="listing-item-content">
-                    <a class="px-3 mb-3 category" href="#">Universidad</a>
-                    <h2 class="mb-1"><a href="#">Universidad Nacional de Ingeniera</a></h2>
-                    <span class="address">Estudia en la universidad con las carreras de ingeniera unicas en el Perú</span>
-                  </div>
-                </div>
-
-          </div>
-
-          <div class="col-md-6 mb-4 mb-lg-0 col-lg-4">
-            
-              <div class="listing-item">
-                  <div class="listing-image">
-                    <img src="images/2.jpg" alt="Image" class="img-fluid">
-                  </div>
-                  <div class="listing-item-content">
-                    <a class="px-3 mb-3 category" href="#">Universidad</a>
-                    <h2 class="mb-1"><a href="#">Pontificie Universidad Catolica del Perú</a></h2>
-                    <span class="address">Estudia en la Universidad mas prestigiosa del Perú</span>
-                  </div>
-                </div>
-
-          </div>
-
-          <div class="col-md-6 mb-4 mb-lg-0 col-lg-4">
-            
-              <div class="listing-item">
-                  <div class="listing-image">
-                    <img src="images/2.jpg" alt="Image" class="img-fluid">
-                  </div>
-                  <div class="listing-item-content">
-                    <a class="px-3 mb-3 category" href="#">Universidad</a>
-                    <h2 class="mb-1"><a href="#">Universidad de Lima</a></h2>
-                    <span class="address">Estudia en su unica sede de Surco</span>
-                  </div>
-                </div>
-
-          </div>
-
+          @endforeach
           
 
-          <div class="col-md-6 mb-4 mb-lg-0 col-lg-4">
-            
-            
-              <div class="listing-item">
-                  <div class="listing-image">
-                    <img src="images/2.jpg" alt="Image" class="img-fluid">
-                  </div>
-                  <div class="listing-item-content">
-                    <a class="px-3 mb-3 category" href="#">Universidad</a>
-                    <h2 class="mb-1"><a href="#">Universidad de Tecnologia e Ingeniera</a></h2>
-                    <span class="address">Estudia en la sede de Barranco</span>
-                  </div>
-                </div>
 
-          </div>
         </div>
       </div>
     </div>
 
-    
+    <div >
+      <a href="{{route('universidad')}}">
+        <button class="btn btn-primary">Ver más</button>
+      </a>
+    </div>
 
     <div class="site-section">
       <div class="container">
@@ -227,8 +154,7 @@
     </div>
 
     <div class="site-section bg-light">
-
-        <div class="row justify-content-center mb-5">
+              <div class="row justify-content-center mb-5">
             <div class="col-md-7 text-center border-primary">
               <h2 class="font-weight-light text-primary">Sugerencia</h2>
               <p class="color-black-opacity-5">Realiza sugerencias para mejorar nuestro sistema web</p>
@@ -300,7 +226,6 @@
         </div>
       </div>
     </div>
-    
     
   </div>
 

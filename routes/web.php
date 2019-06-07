@@ -11,14 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('content.inicio');
-})->name('inicio');
+Route::get('/', 'universidadesController@distritos')->name('inicio');
 
 
-Route::get('/universidades', function(){
-	return view('content.universidades');
-})->name('universidad');
+Route::get('/universidades','universidadesController@universidad')->name('universidad');
 
 Route::get('/ranking', function(){
 	return view('content.ranking');
@@ -28,9 +24,13 @@ Route::get('/nosotros', function(){
 	return view('content.nosotros');
 })->name('nosotros');
 
+
+
 Route::get('registrarse','usuarioController@registro')->name('registro');
 
 Route::post('registrar','usuarioController@registrar')->name('registrar');
+
+
 
 Auth::routes();
 

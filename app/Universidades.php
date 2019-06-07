@@ -10,5 +10,5 @@ class Universidades extends Eloquent
 	protected $connection = 'mongodb';
 	protected $collection = 'universidades';
 
-	protected $fillables = ['nombre','carreras.nombre','carreras.descripcion']
+	protected $fillables = ['nombre','direccion','telefono','distrito','tipo','correo','web','carreras.nombre','carreras.descripcion','carreras.curricula'];
 }
