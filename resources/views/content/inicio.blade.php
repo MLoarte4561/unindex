@@ -17,40 +17,22 @@
             </div>
 
             <div class="form-search-wrap p-2" data-aos="fade-up" data-aos-delay="200">
-              <form method="post">
-
-
+              <form method="post"   >
                 <div class="row align-items-center">
-
-                  
-
-                    <div class="col-lg-12 col-xl-3">
-                        <div class="select-wrap">
-                          <span class="icon icon-room"></span></span>
-                          <select class="form-control dynamic" name="distrito" id="distrito" data-dependent="universidades">
-                              <option value="">--Distritos--</option>
-                              @foreach($universidades_fil as $universidade)
-                                <option value="{{ $universidade ->distrito }}">{{ $universidade ->distrito }}</option>
-                              @endforeach
-                            </select>
-                        </div>
-                        
-                      </div>
-                  
-                  <div class="col-lg-12 col-xl-3 no-sm-border border-right">
+                  <div class="col-lg-12 col-xl-10 no-sm-border border-right">
                       <div class="select-wrap">
-                          <select class="form-control dynamic" name="universidades" id="universidades">
-                            <option value="" >--Universidades--</option>
+                          <select class="form-control " name="universidades" id="universidades">
+                            <option value="" >-- Seleccionar universidad --</option>
                             @foreach($nombres as $nombre)
-                              <option value="{{ $nombre ->nombre }}">{{ $nombre ->nombre }}</option></a>
+                              <option value="{{ $nombre -> nombre }}">{{ $nombre -> nombre }}</option></a>
                             @endforeach
                           </select>
-                        </div>
-                    
+                          <span class="icon icon-room"></span></span>
+                        </div>   
                   </div>
-
+              
                   <div class="col-lg-12 col-xl-2 ml-auto text-right">
-                    <input type="submit" class="btn btn-primary" value="Search">
+                    <input type="submit" class="btn btn-primary" value="Buscar">
                   </div>
                   
                 </div>
@@ -74,6 +56,7 @@
         </div>
 
         <div class="row">
+
           @foreach($universidades_mos as $mos)
           <div class="col-md-6 mb-4 mb-lg-0 col-lg-4">
             
@@ -82,25 +65,24 @@
                 <img src="{{$mos -> imagen}}" alt="Image" class="img-fluid">
               </div>
               <div class="listing-item-content">
-                <a class="px-3 mb-3 category" href="#">Universidad</a>
-                <h2 class="mb-1"><a href="#">{{$mos -> nombre}}</a></h2>
+                <a class="px-3 mb-3 category">Universidad</a>
+                <h2 class="mb-1"><a href="{{action('universidadesController@getUniversidad',$mos->nombre)}}">{{$mos -> nombre}}</a></h2>
               </div>
             </div>
-
           </div>
           @endforeach
           
-
-
         </div>
       </div>
     </div>
 
-    <div >
-      <a href="{{route('universidad')}}">
-        <button class="btn btn-primary">Ver más</button>
+           <div class="row justify-content-center mb-5">
+          <div class="col-md-7 text-center border-primary">
+                              <a href="{{route('universidad')}}">
+        <button type="button" class="btn btn-primary btn-lg">Ver más</button>
       </a>
-    </div>
+          </div>
+        </div>
 
     <div class="site-section">
       <div class="container">
@@ -153,7 +135,23 @@
       </div>
     </div>
 
-    <div class="site-section bg-light">
+
+    
+
+    @if(Auth::guest())
+    <div class="py-5 bg-primary">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md-12">
+            <h2 class="mb-2 text-white">Realiza sugerencias y valoraciones en el sistema web universitario.</h2>
+            <p class="mb-4 lead text-white-opacity-05">Puedes acceder como invitado o registrarte con tu correo electronico</p>
+            <p class="mb-0"><a href="#"data-toggle="modal" data-target="#exampleModal" class="btn btn-outline-white text-white btn-md font-weight-bold">Acceder</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+      @else
+      <div class="site-section bg-light">
               <div class="row justify-content-center mb-5">
             <div class="col-md-7 text-center border-primary">
               <h2 class="font-weight-light text-primary">Sugerencia</h2>
@@ -207,26 +205,11 @@
                 <h3 class="h5 text-black mb-3">Informacion</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ad iure porro mollitia architecto hic consequuntur. Distinctio nisi perferendis dolore, ipsa consectetur? Fugiat quaerat eos qui, libero neque sed nulla.</p>
               </div>
-  
             </div>
           </div>
         </div>
       </div>
-
-
-    
-    <div class="py-5 bg-primary">
-      <div class="container">
-        <div class="row text-center">
-          <div class="col-md-12">
-            <h2 class="mb-2 text-white">Realiza sugerencias y valoraciones en el sistema web universitario.</h2>
-            <p class="mb-4 lead text-white-opacity-05">Puedes acceder como invitado o registrarte con tu correo electronico</p>
-            <p class="mb-0"><a href="#"data-toggle="modal" data-target="#exampleModal" class="btn btn-outline-white text-white btn-md font-weight-bold">Acceder</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-    
+    @endif
   </div>
 
 

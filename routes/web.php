@@ -15,6 +15,7 @@ Route::get('/', 'universidadesController@distritos')->name('inicio');
 
 
 Route::get('/universidades','universidadesController@universidad')->name('universidad');
+Route::get('/{nombre}','universidadesController@getUniversidad');
 
 Route::get('/ranking', function(){
 	return view('content.ranking');

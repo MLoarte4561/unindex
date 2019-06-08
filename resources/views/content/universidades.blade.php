@@ -39,7 +39,7 @@
               <div class="col-md-6 col-lg-6 mb-4 mb-lg-4">
                 <div class="h-entry">
                   <img src="{{$uni -> imagen}}" alt="Image" class="img-fluid">
-                  <h2 class="font-size-regular"><a href="#">{{$uni -> nombre}}</a></h2>
+                  <h2 class="font-size-regular"><a href="{{action('universidadesController@getUniversidad',$uni->nombre)}}">{{$uni -> nombre}}</a></h2>
                   <div class="meta mb-4">Distrito: {{$uni->distrito}} <span class="mx-2">&bullet;</span> <span class="mx-2">&bullet;</span> <a href="#">Entrar</a></div>
                 </div> 
               </div>
@@ -61,7 +61,7 @@
               <h3 class="h5 text-black mb-3">Buscar Universidad</h3>
               <form action="#" method="post">
                 <div class="form-group d-flex">
-                  <input type="text" class="form-control" placeholder="Busque una universidadd licensiada...">
+                  <input type="text" class="form-control" placeholder="Busque una universidadd licenciada...">
                 </div>
               </form>
             </div>
