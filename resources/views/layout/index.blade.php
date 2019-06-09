@@ -27,6 +27,36 @@
 </head>
 
 <body>
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '2125835600878515',
+      cookie     : true,
+      xfbml      : true,
+      version    : '3.3'
+    });
+      
+    FB.AppEvents.logPageView();
+
+
+    FB.getLoginStatus(function(response) {
+        statusChangeCallback(response);
+    });   
+      
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
   <div class="site-wrap">
     <div class="site-mobile-menu">
       <div class="site-mobile-menu-header">
@@ -75,7 +105,7 @@
                       <h6 class="card-title text-center" data-toggle="modal" data-target="#exampleModal2">¿No tienes cuenta? <a href="{{route('registro')}}">Registrate</a></h66>
                       <hr class="my-4">
 
-                      <a href="{{ url('/auth/google')}}"><button class="btn btn-lg btn-google btn-block text-uppercase"><i class="fab fa-google mr-2"></i>Acceder con Google</button></a>
+                      <button class="btn btn-lg btn-google btn-block text-uppercase"><i class="fab fa-google mr-2"></i>Acceder con Google</button>
                       <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i class="fab fa-facebook-f mr-2"></i>Acceder como invitado</button>
 
                     </form>

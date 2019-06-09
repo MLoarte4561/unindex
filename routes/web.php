@@ -17,11 +17,6 @@ Route::get('/', 'universidadesController@distritos')->name('inicio');
 Route::get('/universidades','universidadesController@universidad')->name('universidad');
 Route::get('universidades/{nombre}','universidadesController@getUniversidad')->name('uni');
 
-Route::group(['prefix' => 'auth'], function () {
-    Route::get('/{provider}', 'Auth\LoginController@redirectToProvider');
-    Route::get('/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
-});
-
 
 Route::get('/ranking', 'universidadesController@ranking')->name('ranking');
 
