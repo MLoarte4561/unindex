@@ -17,7 +17,7 @@ class universidadesController extends Controller
 		$universidades_mos = universidades::take(6)->get();
 
 		$nombres = universidades::orderBy('nombre')->get();
-
+		
 		return view('content.inicio',compact('nombres','universidades_mos'));
 	}
 
@@ -27,6 +27,9 @@ class universidadesController extends Controller
 		return view('content.universidades', compact('universidad'));
 	}
 
+	public function ranking(){
+		return view('content.ranking');
+	}
 
 	public function getUniversidad($nombre){
 		$uni = universidades::where('nombre','=',$nombre)->first();
@@ -35,6 +38,8 @@ class universidadesController extends Controller
 
 		return view('content.vista_universidad',compact('uni','carreras')); 
 	}
+
+
 
 	
 

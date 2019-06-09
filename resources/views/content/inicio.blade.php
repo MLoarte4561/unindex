@@ -17,26 +17,25 @@
             </div>
 
             <div class="form-search-wrap p-2" data-aos="fade-up" data-aos-delay="200">
-              <form method="post"   >
+              
                 <div class="row align-items-center">
                   <div class="col-lg-12 col-xl-10 no-sm-border border-right">
-                      <div class="select-wrap">
-                          <select class="form-control " name="universidades" id="universidades">
-                            <option value="" >-- Seleccionar universidad --</option>
-                            @foreach($nombres as $nombre)
-                              <option value="{{ $nombre -> nombre }}">{{ $nombre -> nombre }}</option></a>
-                            @endforeach
-                          </select>
-                          <span class="icon icon-room"></span></span>
-                        </div>   
+                    <div class="select-wrap">
+                        <select class="form-control " name="universidades" id="universidades">
+                          <option value="" >-- Seleccionar universidad --</option>
+                          @foreach($nombres as $nombre)
+                             <option value="{{ $nombre -> nombre }}"><a href="{{route('uni',$nombre->nombre)}}">{{ $nombre -> nombre }}</a></option>
+                          @endforeach
+                        </select>
+                        <span class="icon icon-room"></span></span>
+                      </div>   
                   </div>
               
-                  <div class="col-lg-12 col-xl-2 ml-auto text-right">
+                  <div class="col-lg-13 col-xl-2 ml-auto text-right">
                     <input type="submit" class="btn btn-primary" value="Buscar">
                   </div>
                   
                 </div>
-              </form>
             </div>
 
           </div>
@@ -66,7 +65,7 @@
               </div>
               <div class="listing-item-content">
                 <a class="px-3 mb-3 category">Universidad</a>
-                <h2 class="mb-1"><a href="{{action('universidadesController@getUniversidad',$mos->nombre)}}">{{$mos -> nombre}}</a></h2>
+                <h2 class="mb-1">{{$mos -> nombre}}</a></h2>
               </div>
             </div>
           </div>
@@ -91,7 +90,7 @@
             <img src="images/3.jpeg" alt="Image" class="img-fluid rounded">
           </div>
           <div class="col-md-5 ml-auto">
-            <h2 class="text-primary mb-3">¿Porqué estudiar en una universidad Licensiada?</h2>
+            <h2 class="text-primary mb-3">¿Porqué estudiar en una universidad Licenciada?</h2>
             <p>Estudiar en una universidad licenciada brinda confianza, credibilidad y garantía a los estudiantes y les asegura que la institución cuenta con las mejores condiciones académicas, de infraestructura y de proyección laboral, para beneficio de los futuros profesionales</p>
 
             <ul class="ul-check list-unstyled success">

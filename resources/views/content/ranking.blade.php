@@ -1,5 +1,6 @@
 @extends('layout.index')
 @section('ranking')
+
  <div class="site-blocks-cover inner-page-cover overlay" style="background-image: url(images/6.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="container">
         <div class="row align-items-center justify-content-center text-center">
@@ -119,51 +120,6 @@
 
 
           </div>
-          <div class="col-lg-3 ml-auto">
-
-            <div class="mb-5">
-              <h3 class="h5 text-black mb-3">Buscar Universidad</h3>
-              <form action="#" method="post">
-                  <div class="form-group">
-                      <div class="select-wrap">
-                          <span class="icon icon-room"></span>
-                          <span class="icon"><span class="icon-keyboard_arrow_down"></span></span>
-                          <select class="form-control" name="" id="">
-                            <option value="">Distrito</option>
-                            <option value="">Appartment</option>
-                            <option value="">Restaurant</option>
-                            <option value="">Eat &amp; Drink</option>
-                            <option value="">Events</option>
-                            <option value="">Fitness</option>
-                            <option value="">Others</option>
-                          </select>
-                        </div>
-                    </div>
-                <div class="form-group">
-                  <div class="select-wrap">
-                      <span class="icon"><span class="icon-keyboard_arrow_down"></span></span>
-                      <select class="form-control" name="" id="">
-                        <option value="">Universidad</option>
-                        <option value="">Appartment</option>
-                        <option value="">Restaurant</option>
-                        <option value="">Eat &amp; Drink</option>
-                        <option value="">Events</option>
-                        <option value="">Fitness</option>
-                        <option value="">Others</option>
-                      </select>
-                    </div>
-                </div>
-                <div class="form-group">
-
-                </div>
-              </form>
-            </div>
-            
-           
-
-
-          </div>
-
         </div>
       </div>
     </div>

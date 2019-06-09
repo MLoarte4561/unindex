@@ -8,23 +8,22 @@
   <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
   <link rel="stylesheet" href="fonts/icomoon/style.css">
 
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/magnific-popup.css">
-  <link rel="stylesheet" href="css/jquery-ui.css">
-  <link rel="stylesheet" href="css/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="{{URL::asset('css/bootstrap.min.css')}}">
+  <link rel="stylesheet" href="{{URL::asset('css/magnific-popup.css')}}">
+  <link rel="stylesheet" href="{{URL::asset('css/jquery-ui.css')}}">
+  <link rel="stylesheet" href="{{URL::asset('css/owl.carousel.min.css')}}">
+  <link rel="stylesheet" href="{{URL::asset('css/owl.theme.default.min.css')}}">
 
-  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="{{URL::asset('css/bootstrap-datepicker.css')}}">
 
-  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+  <link rel="stylesheet" href="{{URL::asset('fonts/flaticon/font/flaticon.css')}}">
 
-  <link rel="stylesheet" href="css/aos.css">
-  <link rel="stylesheet" href="css/rangeslider.css">
+  <link rel="stylesheet" href="{{URL::asset('css/aos.css')}}">
+  <link rel="stylesheet" href="{{URL::asset('css/rangeslider.css')}}">
 
+  <link rel="stylesheet" href="{{URL::asset('css/style.css')}}">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="  sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/login.css">
-  <link rel="stylesheet" href="css/style.css">
-
+  <link rel="stylesheet" href="{{URL::asset('css/login.css')}}">
 </head>
 
 <body>
@@ -94,7 +93,7 @@
                 <li ><a href="{{route('universidad')}}"><span>Universidades</span></a></li>
                 <li><a href="{{route('ranking')}}"><span>Ranking</span></a></li>
                 <li><a href="{{route('nosotros')}}"><span>Nosotros</span></a></li>
-                <li><a href="#"data-toggle="modal" data-target="#exampleModal"><span>Iniciar sesión</span></a></li>
+                <li><a href="#" data-toggle="modal" data-target="#exampleModal"><span>Iniciar sesión</span></a></li>
               </ul>
             </nav>
           </div>
@@ -166,9 +165,9 @@
             </form>
           </div>
         </div>
-        <div class="row pt-5 mt-5 text-center">
+        <div class="row pt-1 mt-3 text-center">
           <div class="col-md-12">
-            <div class="border-top pt-5">
+            <div class="border-top pt-3">
             <p>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos los derechos reservados | Tecsup</a>
@@ -184,20 +183,20 @@
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-      <script src="js/typed.js"></script>
+      <script src="{{URL::asset('js/typed.js')}}"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-      <script src="js/jquery-3.3.1.min.js"></script>
-      <script src="js/jquery-migrate-3.0.1.min.js"></script>
-      <script src="js/jquery-ui.js"></script>
-      <script src="js/popper.min.js"></script>
-      <script src="js/bootstrap.min.js"></script>
-      <script src="js/owl.carousel.min.js"></script>
-      <script src="js/jquery.stellar.min.js"></script>
-      <script src="js/jquery.countdown.min.js"></script>
-      <script src="js/jquery.magnific-popup.min.js"></script>
-      <script src="js/bootstrap-datepicker.min.js"></script>
-      <script src="js/aos.js"></script>
-      <script src="js/rangeslider.min.js"></script>
+      <script src="{{URL::asset('js/jquery-3.3.1.min.js')}}"></script>
+      <script src="{{URL::asset('js/jquery-migrate-3.0.1.min.js')}}"></script>
+      <script src="{{URL::asset('js/jquery-ui.js')}}"></script>
+      <script src="{{URL::asset('js/popper.min.js')}}"></script>
+      <script src="{{URL::asset('js/bootstrap.min.js')}}"></script>
+      <script src="{{URL::asset('js/owl.carousel.min.js')}}"></script>
+      <script src="{{URL::asset('js/jquery.stellar.min.js')}}"></script>
+      <script src="{{URL::asset('js/jquery.countdown.min.js')}}"></script>
+      <script src="{{URL::asset('js/jquery.magnific-popup.min.js')}}"></script>
+      <script src="{{URL::asset('js/bootstrap-datepicker.min.js')}}"></script>
+      <script src="{{URL::asset('js/aos.js')}}"></script>
+      <script src="{{URL::asset('js/rangeslider.min.js')}}"></script>
             <script>
             var typed = new Typed('.typed-words', {
            strings: ['Carreras Universitarias', 'Ranking de Universidades'],
@@ -209,7 +208,9 @@
             showCursor: true
             });
             </script>
-      <script src="js/main.js"></script>
+
+  <script src="{{URL::asset('js/main.js')}}"></script>
+
 
 </body>
 </html>

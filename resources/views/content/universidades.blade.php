@@ -66,16 +66,6 @@
               </form>
             </div>
 
-            <div class="mb-5">
-              <h3 class="h5 text-black mb-3">Universidades Populares</h3>
-              <ul class="list-unstyled">
-                <li class="mb-2"><a href="#">PUCP</a></li>
-                <li class="mb-2"><a href="#">UNMSM</a></li>
-                <li class="mb-2"><a href="#">UNI</a></li>
-                <li class="mb-2"><a href="#">UTEC</a></li>
-              </ul>
-            </div>
-
           </div>
           
         </div>

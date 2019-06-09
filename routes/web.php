@@ -15,11 +15,10 @@ Route::get('/', 'universidadesController@distritos')->name('inicio');
 
 
 Route::get('/universidades','universidadesController@universidad')->name('universidad');
-Route::get('/{nombre}','universidadesController@getUniversidad');
+Route::get('universidades/{nombre}','universidadesController@getUniversidad')->name('uni');
 
-Route::get('/ranking', function(){
-	return view('content.ranking');
-})->name('ranking');
+
+Route::get('/ranking', 'universidadesController@ranking')->name('ranking');
 
 Route::get('/nosotros', function(){
 	return view('content.nosotros');
