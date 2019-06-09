@@ -65,7 +65,7 @@
               </div>
               <div class="listing-item-content">
                 <a class="px-3 mb-3 category">Universidad</a>
-                <h2 class="mb-1">{{$mos -> nombre}}</a></h2>
+                <h2 class="mb-1"><a href="{{route('uni',$mos->nombre)}}">{{$mos -> nombre}}</a></h2>
               </div>
             </div>
           </div>
