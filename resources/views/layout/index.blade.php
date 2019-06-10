@@ -28,35 +28,6 @@
 
 <body>
 
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '2125835600878515',
-      cookie     : true,
-      xfbml      : true,
-      version    : '3.3'
-    });
-      
-    FB.AppEvents.logPageView();
-
-
-    FB.getLoginStatus(function(response) {
-        statusChangeCallback(response);
-    });   
-      
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "https://connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
-
-
-
   <div class="site-wrap">
     <div class="site-mobile-menu">
       <div class="site-mobile-menu-header">
@@ -76,58 +47,36 @@
           </div>
           <div class="col-12 col-md-10 d-none d-xl-block">
 
- <!-- Modal Login ----------------------------------------------------->
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="card-body">
-                    <h5 class="card-title text-center">Iniciar Sesión</h5>
-                    <form class="form-signin">
-
-                      <div class="form-label-group">
-                        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-                        <label for="inputEmail">Correo</label>
-                      </div>
-
-                      <div class="form-label-group">
-                        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-                        <label for="inputPassword">Contraseña</label>
-                      </div>
-
-                      <div class="custom-control custom-checkbox mb-3">
-                        <input type="checkbox" class="custom-control-input" id="customCheck1">
-                        <label class="custom-control-label" for="customCheck1">Recordar Contraseña</label>       
-                      </div>
-
-                      <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Entrar</button>
-                      </br>
-
-                      <h6 class="card-title text-center" data-toggle="modal" data-target="#exampleModal2">¿No tienes cuenta? <a href="{{route('registro')}}">Registrate</a></h66>
-                      <hr class="my-4">
-
-                      <button class="btn btn-lg btn-google btn-block text-uppercase"><i class="fab fa-google mr-2"></i>Acceder con Google</button>
-                      <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i class="fab fa-facebook-f mr-2"></i>Acceder como invitado</button>
-
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-
       <!-- Optional JavaScript -->
 
             <nav class="site-navigation position-relative text-right" role="navigation">
 
-              <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
+              <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block nav navbar-nav navbar-right">
                 <li ><a href="{{route('inicio')}}"><span>Inicio</span></a></li>
                 <li ><a href="{{route('universidad')}}"><span>Universidades</span></a></li>
                 <li><a href="{{route('ranking')}}"><span>Ranking</span></a></li>
                 <li><a href="{{route('nosotros')}}"><span>Nosotros</span></a></li>
-                <li><a href="#" data-toggle="modal" data-target="#exampleModal"><span>Iniciar sesión</span></a></li>
+                @if(Session::has('user_name'))
+                <li>
+                  <a href="#">
+                    <span>
+                      {{session('user_name')}}
+                    </span>
+                  </a>
+                </li>
+                  
+                
+                @else
+                <li>
+                <a href="{{route('login')}}" ><span>Iniciar sesión</span></a>
+                </li>  
+                @endif
+                
               </ul>
             </nav>
           </div>
 
+          <!--data-target="#exampleModal"-->
           <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
 
           </div>
@@ -135,11 +84,12 @@
       </div>
     </header>
 
-      @yield('inicio')
-      @yield('universidades')
-      @yield('vista_unive')
-      @yield('ranking')
-      @yield('nosotros')
+    @yield('inicio')
+    @yield('universidades')
+    @yield('vista_unive')
+    @yield('ranking')
+    @yield('nosotros')
+    @yield('login')
       
       <footer class="site-footer">
       <div class="container">

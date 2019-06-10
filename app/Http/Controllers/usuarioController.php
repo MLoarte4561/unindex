@@ -2,14 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Usuario;
+use App\User;
 
 use Illuminate\Http\Request;
 
 class usuarioController extends Controller
 {
 
-    public function registro(){
+    public function index()
+    {
+        return view('content.login');
+    }
+
+    public function index_registro(){
 
         return view('content.registro');
 
@@ -17,17 +22,37 @@ class usuarioController extends Controller
 
     public function registrar(Request $request){
 
-        $Usuario = new Usuario;
+        $User = new User;
 
-        $Usuario -> nombre = $request -> input('nombre');
-        $Usuario -> correo = $request -> input('correo');
-        $Usuario -> fecha_nacimiento = $request -> input('fecha_nacimiento');
-        $Usuario -> contrasenia = $request -> input('contrasenia');
+        $User -> nombre = $request -> input('nombre');
+        $User -> correo = $request -> input('correo');
+        $User -> fecha_nacimiento = $request -> input('fecha_nacimiento');
+        $User -> contrasenia = $request -> md5(input('contrasenia'));
 
-        $Usuario -> save();
+        $User -> save();
 
         return redirect('/');
 
+    }
+
+
+
+    public function login(Request $request)
+    {
+        $usu = $request->get('email');
+        $pwd = $request->get('password');
+        $user = User::where('correo',$usu)->where('contrasenia',$pwd)->first();
+        if(!is_null($user)){
+            session()->put('user_name', $user->nombre);
+            return redirect('/');
+        }else{
+            return redirect('login');
+        }
+    }
+    public function logout()
+    {
+        session()->flush();
+        return redirect('login');
     }
 
 }

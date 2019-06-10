@@ -77,7 +77,7 @@
 
            <div class="row justify-content-center mb-5">
           <div class="col-md-7 text-center border-primary">
-                              <a href="{{route('universidad')}}">
+        <a href="{{route('universidad')}}">
         <button type="button" class="btn btn-primary btn-lg">Ver más</button>
       </a>
           </div>
@@ -137,20 +137,8 @@
 
     
 
-    @if(Auth::guest())
-    <div class="py-5 bg-primary">
-      <div class="container">
-        <div class="row text-center">
-          <div class="col-md-12">
-            <h2 class="mb-2 text-white">Realiza sugerencias y valoraciones en el sistema web universitario.</h2>
-            <p class="mb-4 lead text-white-opacity-05">Puedes acceder como invitado o registrarte con tu correo electronico</p>
-            <p class="mb-0"><a href="#"data-toggle="modal" data-target="#exampleModal" class="btn btn-outline-white text-white btn-md font-weight-bold">Acceder</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-      @else
-      <div class="site-section bg-light">
+    @if(Session::has('user_name'))
+    <div class="site-section bg-light">
               <div class="row justify-content-center mb-5">
             <div class="col-md-7 text-center border-primary">
               <h2 class="font-weight-light text-primary">Sugerencia</h2>
@@ -208,6 +196,20 @@
           </div>
         </div>
       </div>
+      @else
+      
+
+      <div class="py-5 bg-primary">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md-12">
+            <h2 class="mb-2 text-white">Realiza sugerencias y valoraciones en el sistema web universitario.</h2>
+            <p class="mb-4 lead text-white-opacity-05">Puedes acceder como invitado o registrarte con tu correo electronico</p>
+            <p class="mb-0"><a href="{{route('login')}}" data-toggle="modal" data-target="#exampleModal" class="btn btn-outline-white text-white btn-md font-weight-bold">Acceder</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
     @endif
   </div>
 

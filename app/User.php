@@ -2,38 +2,19 @@
 
 namespace App;
 
-use Illuminate\Notifications\Notifiable;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Model;
+use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
 
-class User extends Authenticatable
+class User extends Eloquent
 {
-    use Notifiable;
+    protected $connection = 'mongodb';
+    protected $collection = 'usuario';
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $fillable = [
-        'name', 'email', 'password','provider','provider_id'
-    ];
+    protected $fillables = ['id_usuario','nombre','correo','fecha_nacimiento','contrasenia'];
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
+    public function sugerencia(){
 
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+    	return $this->embedsMany('App\Sugerencia');
+    	
+    }
 }

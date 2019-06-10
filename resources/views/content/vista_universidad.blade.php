@@ -66,7 +66,8 @@
 
                       <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                         <div class="card-body">
-                          {{$car->descripcion}}
+                          {{$car->descripcion}}<br><br>
+                        <a href="{{$car->curricula}}" class="btn btn-primary">Ver currícula</a>
                         </div>
                       </div>
                     </div>
@@ -74,7 +75,20 @@
                 @endforeach
               </div>
 
-            <div class="row justify-content-center mb-5">
+              <div class="row justify-content-center mb-5">
+                <div class="col-md-7 text-center border-primary">
+                  <h2 class="font-weight-light text-primary">Comentarios</h2>
+                  <p class="color-black-opacity-5">Comentarios respecto a la información de la universidad</p>
+                </div>
+
+              </div>
+
+            
+                
+
+                  
+                  @if(Session::has('user_name'))
+                  <div class="row justify-content-center mb-5">
                 <div class="col-md-7 text-center border-primary">
                   <h2 class="font-weight-light text-primary">Realiza una Valoracion sobre la Universidad</h2>
                   <p class="color-black-opacity-5">Realiza valoraciones sobre la universidad</p>
@@ -82,36 +96,35 @@
               </div>
             <div class="container">
               <div class="row">
-                <div class="col-md-7 mb-5"  data-aos="fade">
-      
-                  
-      
-                  <form action="#" class="p-5 bg-white">
-      
-                    <div class="row form-group">
-    
-                      
-                      <div class="col-md-12">
-                        <label class="text-black" for="subject">Nombre</label> 
-                        <input type="subject" id="subject" class="form-control" required>
-                      </div>
-                    </div>
-      
+                <div class="col-md-7 mb-3"  data-aos="fade">
+                  <form action="{{route('sugerencia',$uni->nombre,session('user_name'))}}" class="p-5 bg-white">
                     <div class="row form-group">
                       <div class="col-md-12">
                         <label class="text-black" for="message">Mensaje</label> 
                         <textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Escribe aquí tu sugerencia.." required></textarea>
                       </div>
                     </div>
-      
                     <div class="row form-group">
                       <div class="col-md-12">
                         <input type="submit" value="Enviar Valoracion" class="btn btn-primary py-2 px-4 text-white">
                       </div>
                     </div>
-      
-        
                   </form>
+
+                  @else
+                  <div class="py-5 bg-primary">
+                    <div class="container">
+                      <div class="row text-center">
+                        <div class="col-md-12">
+                          <h2 class="mb-2 text-white">Realiza sugerencias y valoraciones en el sistema web universitario.</h2>
+                          <p class="mb-4 lead text-white-opacity-05">Puedes acceder como invitado o registrarte con tu correo electronico</p>
+                          <p class="mb-0"><a href="{{route('login')}}" data-toggle="modal" data-target="#exampleModal" class="btn btn-outline-white text-white btn-md font-weight-bold">Acceder</a></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  @endif
                 </div>
               </div>
             </div>
