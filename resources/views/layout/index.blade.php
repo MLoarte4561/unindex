@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
-  <link rel="stylesheet" href="fonts/icomoon/style.css">
+  <link rel="stylesheet" href="{{URL::asset('fonts/icomoon/style.css')}}">
 
   <link rel="stylesheet" href="{{URL::asset('css/bootstrap.min.css')}}">
   <link rel="stylesheet" href="{{URL::asset('css/magnific-popup.css')}}">
@@ -38,12 +38,12 @@
       <div class="site-mobile-menu-body"></div>
     </div>
     
-    <header class="site-navbar py-2 bg-white" role="banner">
+    <header class="site-navbar py-2" style="background-color: #2D9EDB;" role="banner">
 
       <div class="container">
         <div class="row align-items-center">
           <div class="col-11 col-xl-2">
-            <h1 class="mb-0 site-logo"><a href="{{route('inicio')}}" class="text-black h2 mb-0">UNINDEX</a></h1>
+            <h1 class="mb-0 site-logo"><a href="{{route('inicio')}}" class="text-white h2 mb-0">UNINDEX</a></h1>
           </div>
           <div class="col-12 col-md-10 d-none d-xl-block">
 
@@ -52,23 +52,44 @@
             <nav class="site-navigation position-relative text-right" role="navigation">
 
               <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block nav navbar-nav navbar-right">
-                <li ><a href="{{route('inicio')}}"><span>Inicio</span></a></li>
-                <li ><a href="{{route('universidad')}}"><span>Universidades</span></a></li>
-                <li><a href="{{route('ranking')}}"><span>Ranking</span></a></li>
-                <li><a href="{{route('nosotros')}}"><span>Nosotros</span></a></li>
+                <li ><a href="{{route('inicio')}}" style="color: white;"><span>Inicio</span></a></li>
+                <li ><a href="{{route('universidad')}}" style="color: white;"><span>Universidades</span></a></li>
+                <li><a href="{{route('ranking')}}" style="color: white;"><span>Ranking</span></a></li>
+                <li><a href="{{route('nosotros')}}" style="color: white;"><span>Nosotros</span></a></li>
                 @if(Session::has('user_name'))
                 <li>
+
+                                      <ul class="dropdown-menu">
+                      <!-- User image -->
+                      <li class="user-header">
+                        <img src="../../dist/img/avatar5.png" class="img-circle" alt="User Image">
+                        <p>
+                         Usuario
+                        </p>
+                      </li>
+                      <!-- Menu Body -->
+                      <li class="user-body">
+                      
+                        <div class="pull-right">
+                          <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                        </div>
+                      </li>
+                    </ul>
                   <a href="#">
-                    <span>
+                    <span style="color: white;">
+
                       {{session('user_name')}}
+
                     </span>
+
                   </a>
                 </li>
+
                   
                 
                 @else
                 <li>
-                <a href="{{route('login')}}" ><span>Iniciar sesión</span></a>
+                <a href="{{route('login')}}" ><span style="color: white;">Iniciar sesión</span></a>
                 </li>  
                 @endif
                 
@@ -180,9 +201,9 @@
             <script>
             var typed = new Typed('.typed-words', {
            strings: ['Carreras Universitarias', 'Ranking de Universidades'],
-            typeSpeed: 80,
-            backSpeed: 80,
-            backDelay: 4000,
+            typeSpeed: 30,
+            backSpeed: 30,
+            backDelay: 2000,
             startDelay: 1000,
             loop: true,
             showCursor: true

@@ -38,7 +38,7 @@
                 <p><strong>Teléfono: </strong>{{$uni->telefono}}</p>
                 <p><strong>Correo: </strong>{{$uni->correo}}</p>
                 <p><strong>Tipo: </strong>{{$uni->tipo}}</p>
-                <p><strong><a href='{{$uni->web}}'>Web</a></strong></p>
+                <p><strong><a href='{{$uni->web}}' target="_blank">Web</a></strong></p>
               </ul>
             </div>
           </div>
@@ -54,6 +54,7 @@
                 </div>
 
                 @foreach($carreras as $car)
+                <div class="container">
                   <div class="accordion" id="accordionExample">
                     <div class="card">
                       <div class="card-header" id="headingOne">
@@ -67,13 +68,14 @@
                       <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                         <div class="card-body">
                           {{$car->descripcion}}<br><br>
-                        <a href="{{$car->curricula}}" class="btn btn-primary">Ver currícula</a>
+                        <a href="{{$car->curricula}}" class="btn btn-primary" target="_blank">Ver currícula</a>
                         </div>
                       </div>
                     </div>
                   </div>
+                </div>
                 @endforeach
-              </div>
+            </div>
 
               <div class="row justify-content-center mb-5">
                 <div class="col-md-7 text-center border-primary">

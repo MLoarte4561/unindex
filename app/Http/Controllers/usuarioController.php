@@ -20,14 +20,13 @@ class usuarioController extends Controller
 
     }
 
+
     public function registrar(Request $request){
-
         $User = new User;
-
         $User -> nombre = $request -> input('nombre');
         $User -> correo = $request -> input('correo');
         $User -> fecha_nacimiento = $request -> input('fecha_nacimiento');
-        $User -> contrasenia = $request -> md5(input('contrasenia'));
+        $User -> contrasenia = $request -> input('contrasenia');
 
         $User -> save();
 

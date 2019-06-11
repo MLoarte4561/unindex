@@ -12,7 +12,7 @@
             <div class="row justify-content-center mb-4">
               <div class="col-md-8 text-center">
                 <h1 data-aos="fade-up">¡Bienvenido a Unindex, el buscador de universidades! <span class="typed-words"></span></h1>
-                <p data-aos="fade-up" data-aos-delay="100"><b> Empieza a buscar universidades licenciadas por la SUNEDU en Lima Metropolitana</b></p>
+                <p data-aos="fade-up" data-aos-delay="100"><b> Empieza a buscar universidades licenciadas por SUNEDU en Lima Metropolitana</b></p>
               </div>
             </div>
 
@@ -50,14 +50,14 @@
         <div class="row justify-content-center mb-5">
           <div class="col-md-7 text-center border-primary">
             <h2 class="font-weight-light text-primary">Universidades</h2>
-            <p class="color-black-opacity-5">Visualiza las Universidades Licenciadas por la SUNEDU </p>
+            <p class="color-black-opacity-5">Visualiza las universidades licenciadas por  SUNEDU </p>
           </div>
         </div>
 
         <div class="row">
 
           @foreach($universidades_mos as $mos)
-          <div class="col-md-6 mb-4 mb-lg-0 col-lg-4">
+          <div class="col-md-6 mb-4 mb-lg-0 col-lg-4" >
             
             <div class="listing-item">
               <div class="listing-image">
@@ -90,7 +90,7 @@
             <img src="images/3.jpeg" alt="Image" class="img-fluid rounded">
           </div>
           <div class="col-md-5 ml-auto">
-            <h2 class="text-primary mb-3">¿Porqué estudiar en una universidad Licenciada?</h2>
+            <h2 class="text-primary mb-3">¿Por qué estudiar en una universidad licenciada?</h2>
             <p>Estudiar en una universidad licenciada brinda confianza, credibilidad y garantía a los estudiantes y les asegura que la institución cuenta con las mejores condiciones académicas, de infraestructura y de proyección laboral, para beneficio de los futuros profesionales</p>
 
             <ul class="ul-check list-unstyled success">
@@ -110,7 +110,7 @@
         <div class="row justify-content-center mb-5">
           <div class="col-md-7 text-center border-primary">
             <h2 class="font-weight-light text-primary">Noticias</h2>
-            <p class="color-black-opacity-5">See Our Daily News &amp; Updates</p>
+            <p class="color-black-opacity-5">Entérate de las ultimas noticias sobre las universidades licensiadas</p>
           </div>
         </div>
         <div class="row mb-3 align-items-stretch">
@@ -189,7 +189,7 @@
             <div class="col-md-5"  data-aos="fade" data-aos-delay="100">
               
               <div class="p-4 mb-3 bg-white">
-                <h3 class="h5 text-black mb-3">Informacion</h3>
+                <h3 class="h5 text-black mb-3">Información</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ad iure porro mollitia architecto hic consequuntur. Distinctio nisi perferendis dolore, ipsa consectetur? Fugiat quaerat eos qui, libero neque sed nulla.</p>
               </div>
             </div>
@@ -204,7 +204,7 @@
         <div class="row text-center">
           <div class="col-md-12">
             <h2 class="mb-2 text-white">Realiza sugerencias y valoraciones en el sistema web universitario.</h2>
-            <p class="mb-4 lead text-white-opacity-05">Puedes acceder como invitado o registrarte con tu correo electronico</p>
+            <p class="mb-4 lead text-white-opacity-05">Puedes acceder como invitado o registrarte con tu correo electrónico</p>
             <p class="mb-0"><a href="{{route('login')}}" data-toggle="modal" data-target="#exampleModal" class="btn btn-outline-white text-white btn-md font-weight-bold">Acceder</a></p>
           </div>
         </div>
