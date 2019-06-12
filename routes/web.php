@@ -19,6 +19,9 @@ Route::post('/universidades/{nombre}','universidadesController@crearsugerencia')
 
 
 Route::get('/ranking', 'universidadesController@ranking')->name('ranking');
+Route::get('/{nombre}/perfil', function(){
+	return view('content.perfil');
+})->name('perfil');
 
 Route::get('/nosotros', function(){
 	return view('content.nosotros');
@@ -36,7 +39,7 @@ Route::post('/registrar','usuarioController@registrar');
 /* --------------------- Administrador ------------------------*/
 Route::get('admin',function(){
 	return view('admin_content.login_admin');
-})->name('login');
+})->name('login_admin');
 
 
 Route::get('admin/home',function(){
@@ -63,6 +66,11 @@ Route::get('admin/noticias',function(){
 	return view('admin_content.noticias_admin');
 })->name('noticias');
 
+Route::get('/logout','usuarioController@logout')->name('logout');
+
+Route::get('/editar_perfil', function () {
+	return view('content.editar_perfil');
+})->name('editar');
 
 
 

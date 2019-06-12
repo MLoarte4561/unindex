@@ -75,7 +75,7 @@
                         </div>
                       </li>
                     </ul>
-                  <a href="#">
+                  <a href="{{route('perfil',session('user_name'))}}">
                     <span style="color: white;">
 
                       {{session('user_name')}}
@@ -111,6 +111,8 @@
     @yield('ranking')
     @yield('nosotros')
     @yield('login')
+    @yield('perfil')
+    @yield('editar')
       
       <footer class="site-footer">
       <div class="container">
@@ -123,7 +125,7 @@
                   <li><a href="{{route('inicio')}}">Inicio</a></li>
                   <li><a href="{{route('universidad')}}">Universidades</a></li>
                   <li><a href="{{route('ranking')}}">Ranking Universitario</a></li>
-                  <li><a href="#"data-toggle="modal" data-target="#exampleModal">Login</a></li>
+                  <li><a href="{{route('login')}}">Login</a></li>
                 </ul>
               </div>
               <div class="col-md-4">
