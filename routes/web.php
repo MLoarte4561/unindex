@@ -32,3 +32,42 @@ Route::get('/registrar','usuarioController@index_registro')->name('registrar');
 
 Route::post('/registrar','usuarioController@registrar');
 
+
+/* --------------------- Administrador ------------------------*/
+Route::get('admin',function(){
+	return view('admin_content.login_admin');
+})->name('login');
+
+
+Route::get('admin/home',function(){
+	return view('admin_content.index_admin');
+})->name('admin');
+
+Route::get('admin/usuarios',function(){
+	return view('admin_content.usuarios_admin');
+})->name('usuarios');
+
+Route::get('admin/sugerencias',function(){
+	return view('admin_content.sugerencias_admin');
+})->name('sugerencias');
+
+Route::get('admin/graficos',function(){
+	return view('admin_content.graficos_admin');
+})->name('graficos');
+
+Route::get('admin/universidades',function(){
+	return view('admin_content.universidades_admin');
+})->name('universidades');
+
+Route::get('admin/noticias',function(){
+	return view('admin_content.noticias_admin');
+})->name('noticias');
+
+
+
+
+
+
+
+
+

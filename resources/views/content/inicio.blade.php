@@ -57,11 +57,10 @@
         <div class="row">
 
           @foreach($universidades_mos as $mos)
-          <div class="col-md-6 mb-4 mb-lg-0 col-lg-4" >
-            
-            <div class="listing-item">
+          <div class="col-md-6 mb-4 mb-lg-4 col-lg-4" >
+            <div class="listing-item" >
               <div class="listing-image">
-                <img src="{{$mos -> imagen}}" alt="Image" class="img-fluid">
+               <img src="{{$mos -> imagen}}" alt="Image" class="img-fluid" >
               </div>
               <div class="listing-item-content">
                 <a class="px-3 mb-3 category">Universidad</a>
