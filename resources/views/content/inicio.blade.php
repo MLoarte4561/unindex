@@ -18,6 +18,7 @@
 
             <div class="form-search-wrap p-2" data-aos="fade-up" data-aos-delay="200">
               
+              <form action="{{route('uni',universidades.value)}}" method="post">
                 <div class="row align-items-center">
                   <div class="col-lg-12 col-xl-10 no-sm-border border-right">
                     <div class="select-wrap">
@@ -27,15 +28,17 @@
                              <option value="{{ $nombre -> nombre }}"><a href="{{route('uni',$nombre->nombre)}}">{{ $nombre -> nombre }}</a></option>
                           @endforeach
                         </select>
-                        <span class="icon icon-room"></span></span>
-                      </div>   
+                      <span class="icon icon-room"></span></span>
+                    </div>   
                   </div>
               
                   <div class="col-lg-13 col-xl-2 ml-auto text-right">
                     <input type="submit" class="btn btn-primary" value="Buscar">
                   </div>
+                </div>
                   
                 </div>
+              </form>
             </div>
 
           </div>
