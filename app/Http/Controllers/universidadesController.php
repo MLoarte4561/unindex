@@ -43,13 +43,14 @@ class universidadesController extends Controller
 		return view('content.vista_universidad',compact('uni','carreras')); 
 	}
 
-	public function crearsugerencia($universidad, $user_name,Request $request){
-
-		$usuario = User::find($user_name);
-        $descripcion = $request->get('message');
+	public function crearsugerencia(Request $request){
+		$user_name = session('user_name');
+		$usuario = User::where('nombre',$user_name);
+        $descripcion = $request->get('mensaje');
         $arrModel[] = [
-            'descripcion' => $descripcion,
-        ];       
+        	'usuario' => $user_name,
+            'descripcion' => $descripcion
+        ];
         $usuario->push('sugerencias', $arrModel);
 
         return redirect('/');

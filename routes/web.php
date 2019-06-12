@@ -12,10 +12,10 @@
 */
 
 Route::get('/', 'universidadesController@distritos')->name('inicio');
+Route::post('/sugerencia','universidadesController@crearsugerencia')->name('sugerencia');
 
 Route::get('/universidades','universidadesController@universidad')->name('universidad');
 Route::get('/universidades/{nombre}','universidadesController@getUniversidad')->name('uni');
-Route::post('/universidades/{nombre}','universidadesController@crearsugerencia')->name('sugerencia');
 
 
 Route::get('/ranking', 'universidadesController@ranking')->name('ranking');
