@@ -18,7 +18,7 @@
 
             <div class="form-search-wrap p-2" data-aos="fade-up" data-aos-delay="200">
               
-              <form action="{{route('uni',universidades.value)}}" method="post">
+              <form action="" method="post">
                 <div class="row align-items-center">
                   <div class="col-lg-12 col-xl-10 no-sm-border border-right">
                     <div class="select-wrap">
