@@ -134,63 +134,34 @@
     </div>
 
 
-    
-
     @if(Session::has('user_name'))
     <div class="site-section bg-light">
               <div class="row justify-content-center mb-5">
             <div class="col-md-7 text-center border-primary">
-              <h2 class="font-weight-light text-primary">Sugerencia</h2>
-              <p class="color-black-opacity-5">Realiza sugerencias para mejorar nuestro sistema web</p>
+              <h2 class="font-weight-light text-primary">¿Cómo podemos mejorar tu experiencia?</h2>
+              <p class="color-black-opacity-5">Realiza tu sugerencia para mejorar nuestro sistema web</p>
             </div>
           </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-7 mb-5"  data-aos="fade">
+        <div class="container ">
+          <div class="row justify-content-center mb-5">
+            <div class="col-md-8 mb-5 "  data-aos="fade">
   
-              
-  
-              <form action="#" class="p-5 bg-white">
-  
+              <form action="{{route('sugerencia')}}" method="post" class="p-4 bg-white">
+                {{csrf_field()}}
                 <div class="row form-group">
-
-                  
-                  <div class="col-md-12">
-                    <label class="text-black" for="subject">Nombre</label> 
-                    <input type="subject" id="subject" class="form-control">
-                  </div>
-                </div>
-
-                <div class="row form-group">
-                  
-                    <div class="col-md-12">
-                      <label class="text-black" for="email">Email</label> 
-                      <input type="email" id="email" class="form-control">
-                    </div>
-                  </div>
-  
-                <div class="row form-group">
-                  <div class="col-md-12">
-                    <label class="text-black" for="message">Mensaje</label> 
-                    <textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Escribe aquí tu sugerencia.."></textarea>
+                  <div class="col-md-12"> 
+                    <textarea name="mensaje" id="message" cols="30" rows="7" class="form-control" placeholder="Escribe aquí tu sugerencia.."></textarea>
                   </div>
                 </div>
   
                 <div class="row form-group">
                   <div class="col-md-12">
-                    <input type="submit" value="Enviar Sugerencia" class="btn btn-primary py-2 px-4 text-white">
+                    <input type="submit" value="Enviar" class="btn btn-primary py-2 px-4 text-white">
                   </div>
                 </div>
   
     
               </form>
-            </div>
-            <div class="col-md-5"  data-aos="fade" data-aos-delay="100">
-              
-              <div class="p-4 mb-3 bg-white">
-                <h3 class="h5 text-black mb-3">Información</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ad iure porro mollitia architecto hic consequuntur. Distinctio nisi perferendis dolore, ipsa consectetur? Fugiat quaerat eos qui, libero neque sed nulla.</p>
-              </div>
             </div>
           </div>
         </div>

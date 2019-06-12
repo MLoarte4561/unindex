@@ -12,10 +12,10 @@
 */
 
 Route::get('/', 'universidadesController@distritos')->name('inicio');
+Route::post('/sugerencia','universidadesController@crearsugerencia')->name('sugerencia');
 
 Route::get('/universidades','universidadesController@universidad')->name('universidad');
 Route::get('/universidades/{nombre}','universidadesController@getUniversidad')->name('uni');
-Route::post('/universidades/{nombre}','universidadesController@crearsugerencia')->name('sugerencia');
 
 
 Route::get('/ranking', 'universidadesController@ranking')->name('ranking');
@@ -36,7 +36,7 @@ Route::post('/registrar','usuarioController@registrar');
 /* --------------------- Administrador ------------------------*/
 Route::get('admin',function(){
 	return view('admin_content.login_admin');
-})->name('login');
+})->name('login_admin');
 
 
 Route::get('admin/home',function(){

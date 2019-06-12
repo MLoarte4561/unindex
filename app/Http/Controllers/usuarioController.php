@@ -24,6 +24,7 @@ class usuarioController extends Controller
     public function registrar(Request $request){
         $User = new User;
         $User -> nombre = $request -> input('nombre');
+        $User -> tipo = 1;
         $User -> correo = $request -> input('correo');
         $User -> fecha_nacimiento = $request -> input('fecha_nacimiento');
         $User -> contrasenia = $request -> input('contrasenia');
@@ -40,7 +41,7 @@ class usuarioController extends Controller
     {
         $usu = $request->get('email');
         $pwd = $request->get('password');
-        $user = User::where('correo',$usu)->where('contrasenia',$pwd)->first();
+        $user = User::where('correo',$usu)->where('contrasenia',$pwd)->where('tipo',1)->first();
         if(!is_null($user)){
             session()->put('user_name', $user->nombre);
             return redirect('/');
@@ -48,10 +49,12 @@ class usuarioController extends Controller
             return redirect('login');
         }
     }
+
+
     public function logout()
     {
         session()->flush();
-        return redirect('login');
+        return redirect('/');
     }
 
 }

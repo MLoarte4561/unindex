@@ -10,7 +10,7 @@ class User extends Eloquent
     protected $connection = 'mongodb';
     protected $collection = 'usuario';
 
-    protected $fillables = ['id_usuario','nombre','correo','fecha_nacimiento','contrasenia'];
+    protected $fillables = ['id_usuario','tipo','nombre','correo','fecha_nacimiento','contrasenia'];
 
     public function sugerencia(){
 
