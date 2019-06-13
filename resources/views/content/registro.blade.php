@@ -34,7 +34,7 @@
           <div class="card-body">
             <h5 class="card-title text-center">Registrar</h5>
             <form class="form-signin" method="post" action="{{url('registrar')}}">
-    			{{ csrf_field() }}
+    			     {{ csrf_field() }}
               <div class="form-label-group">
                 <input type="text" id="nombre" class="form-control" placeholder="Nombre"  name="nombre" required >
                 <label for="nombre">Nombre</label>
@@ -54,6 +54,8 @@
                 <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="contrasenia" required>
                 <label for="inputPassword">Contraseña</label>
               </div>
+
+              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Registrarse</button>
 
             </form>
           </div>

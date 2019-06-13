@@ -35,7 +35,12 @@ class universidadesController extends Controller
 		return view('content.ranking');
 	}
 
-	public function getUniversidad($nombre){
+	public function getUniversidad($nombre, Request $req){
+
+		if($nombre=='buscar'){
+			$nombre = $req->get('universidades');
+		}
+
 		$uni = universidades::where('nombre','=',$nombre)->first();
 
 		$carreras = Universidades::where('nombre','=',$nombre)->first()->carreras;
@@ -48,7 +53,6 @@ class universidadesController extends Controller
 		$usuario = User::where('nombre',$user_name);
         $descripcion = $request->get('mensaje');
         $arrModel[] = [
-        	'usuario' => $user_name,
             'descripcion' => $descripcion
         ];
         $usuario->push('sugerencias', $arrModel);

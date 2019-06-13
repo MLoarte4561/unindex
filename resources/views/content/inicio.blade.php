@@ -18,11 +18,12 @@
 
             <div class="form-search-wrap p-2" data-aos="fade-up" data-aos-delay="200">
               
-              <form action="" method="post">
+              <form action="{{route('uni','buscar')}}" method="post">
+                {{csrf_field()}}
                 <div class="row align-items-center">
                   <div class="col-lg-12 col-xl-10 no-sm-border border-right">
                     <div class="select-wrap">
-                        <select class="form-control " name="universidades" id="universidades">
+                        <select class="form-control" name="universidades" id="universidades">
                           <option value="" >-- Seleccionar universidad --</option>
                           @foreach($nombres as $nombre)
                              <option value="{{ $nombre -> nombre }}"><a href="{{route('uni',$nombre->nombre)}}">{{ $nombre -> nombre }}</a></option>
