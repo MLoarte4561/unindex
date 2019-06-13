@@ -125,15 +125,14 @@
                   <li><a href="{{route('inicio')}}">Inicio</a></li>
                   <li><a href="{{route('universidad')}}">Universidades</a></li>
                   <li><a href="{{route('ranking')}}">Ranking Universitario</a></li>
-<<<<<<< HEAD
-                  <li><a href="{{route('login')}}">Login</a></li>
-=======
+                  
+
                   @if(session::has('user_name'))
 
                   @else
-                    <li><a href="#"data-toggle="modal" data-target="#exampleModal">Login</a></li>
+                    <li><a href="{{route('login')}}">Login</a></li>
                   @endif
->>>>>>> dff031010b8578cab5ef62bc76d0874effedc26b
+
                 </ul>
               </div>
               <div class="col-md-5">
