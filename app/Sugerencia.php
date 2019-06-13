@@ -8,7 +8,7 @@ use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
 class Sugerencia extends Eloquent
 {
     protected $connection = 'mongodb';
-    protected $collection = 'sugerencias';
+    protected $collection = 'usuario';
 
     protected $fillables = ['descripcion']; 
 }
