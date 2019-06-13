@@ -10,5 +10,5 @@ class Sugerencia extends Eloquent
     protected $connection = 'mongodb';
     protected $collection = 'sugerencias';
 
-    protected $fillables = ['fecha','descripcion']; 
+    protected $fillables = ['descripcion']; 
 }
