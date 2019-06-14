@@ -25,7 +25,7 @@
                            </div>
                            <br>
                            <div class="col-md-12 text-center ">
-                              <a  href="{{route('editar')}}"><button class=" btn btn-block mybtn btn-primary tx-tfm" >Editar Datos</button></a>
+                              <a  href="{{route('editar', $datos->_id )}}"><button class=" btn btn-block mybtn btn-primary tx-tfm" >Editar Datos</button></a>
                            </div>
                            <br><br>
                            <div class="form-group">

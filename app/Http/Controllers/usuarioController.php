@@ -57,8 +57,24 @@ class usuarioController extends Controller
 
     }
 
-    public function editar_datos(){
-        
+    public function edit($id){
+
+        $datos_user = User::where('_id',$id)->first();
+
+        return view('content.editar_perfil',compact('datos_user'));
+
+    }
+
+    public function editar_datos(Request $res, $id){
+
+        $nuevo = User::where('_id',$id)->first();
+        $nuevo -> nombre = $res->input('new_nombre');
+        $nuevo -> contrasenia = $res->input('new_pass');
+        $nuevo->save();
+
+        return redirect('/');
+
+
     }
 
 

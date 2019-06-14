@@ -19,7 +19,12 @@ Route::any('/universidades/{nombre}','universidadesController@getUniversidad')->
 
 
 Route::get('/ranking', 'universidadesController@ranking')->name('ranking');
+
 Route::get('/perfil','usuarioController@datos')->name('perfil');
+
+Route::get('/{id}/editar_perfil', 'usuarioController@edit')->name('editar');
+Route::post('/{id}/editar_perfil','usuarioController@editar_datos')->name('new');
+
 
 Route::get('/nosotros', function(){
 	return view('content.nosotros');
@@ -66,9 +71,7 @@ Route::get('admin/noticias',function(){
 
 Route::get('/logout','usuarioController@logout')->name('logout');
 
-Route::get('/editar_perfil', function () {
-	return view('content.editar_perfil');
-})->name('editar');
+
 
 
 
