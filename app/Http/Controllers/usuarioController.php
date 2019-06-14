@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use App\User;
 
+use Session;
+
+use Redirect;
+
 use Illuminate\Http\Request;
 
 class usuarioController extends Controller
@@ -22,16 +26,24 @@ class usuarioController extends Controller
 
 
     public function registrar(Request $request){
-        $User = new User;
-        $User -> nombre = $request -> input('nombre');
-        $User -> tipo = 1;
-        $User -> correo = $request -> input('correo');
-        $User -> fecha_nacimiento = $request -> input('fecha_nacimiento');
-        $User -> contrasenia = $request -> input('contrasenia');
+        $correo =$request -> input('correo');
+        if (User::where($correo,'exists', true)->get()){
+            Session::flash('message','El correo que ingresó ya se encuentra en uso');
+            return Redirect::to('/registrar');
+        }else{
+            $User = new User;
+            $User -> nombre = $request -> input('nombre');
+            $User -> tipo = 1;
+            $User -> correo = $request -> input('correo');
+            $User -> fecha_nacimiento = $request -> input('fecha');
+            $User -> contrasenia = $request -> input('contrasenia');
 
-        $User -> save();
+            $User -> save();
 
-        return redirect('/');
+            return redirect('/login');
+        }
+
+        
 
     }
 

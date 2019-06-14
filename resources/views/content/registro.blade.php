@@ -37,16 +37,24 @@
     			     {{ csrf_field() }}
               <div class="form-label-group">
                 <input type="text" id="nombre" class="form-control" placeholder="Nombre"  name="nombre" required pattern="[A-Za-z]+">
-                <label for="nombre" >Nombre</label>
+                <label for="nombre" >Nombre de usuario</label>
               </div>
 
                 <div class="form-label-group">
                 <input type="email" id="correo" class="form-control" placeholder="Correo" name="correo" required >
                 <label for="correo">Correo</label>
               </div>
+              @if(Session::has('message'))
+              <div class="form-group">
+                <div class="alert alert-primary" role="alert">
+                  {{Session('message')}}
+                </div>
+              </div>
+                
+              @endif
 
-				<div class="form-label-group">
-                <input type="date" id="fecha" class="form-control" placeholder="Fecha de Nacimiento" name="fecha" required >
+				      <div class="form-label-group">
+                <input type="date" id="fecha" class="form-control" placeholder="Fecha de Nacimiento" name="fecha" required max="2007-01-01">
                 <label for="fecha">Fecha de Nacimiento</label>
               </div>
 
@@ -56,6 +64,8 @@
               </div>
 
               <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Registrarse</button>
+
+
 
             </form>
           </div>
