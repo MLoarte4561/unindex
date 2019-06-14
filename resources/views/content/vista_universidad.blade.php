@@ -120,7 +120,7 @@
                         <div class="col-md-12">
                           <h2 class="mb-2 text-white">Realiza sugerencias y valoraciones en el sistema web universitario.</h2>
                           <p class="mb-4 lead text-white-opacity-05">Puedes acceder como invitado o registrarte con tu correo electronico</p>
-                          <p class="mb-0"><a href="{{route('login')}}" data-toggle="modal" data-target="#exampleModal" class="btn btn-outline-white text-white btn-md font-weight-bold">Acceder</a></p>
+                          <p class="mb-0"><a href="{{route('login')}}" class="btn btn-outline-white text-white btn-md font-weight-bold">Acceder</a></p>
                         </div>
                       </div>
                     </div>
