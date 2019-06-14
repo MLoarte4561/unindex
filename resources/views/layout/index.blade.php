@@ -75,7 +75,7 @@
                         </div>
                       </li>
                     </ul>
-                  <a href="{{route('perfil',session('user_name'))}}">
+                  <a href="{{route('perfil')}}">
                     <span style="color: white;">
 
                       {{session('user_name')}}

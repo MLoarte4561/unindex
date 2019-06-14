@@ -50,6 +50,17 @@ class usuarioController extends Controller
         }
     }
 
+    public function datos(){
+        $datos = User::where("nombre",session('user_name'))->first();
+
+        return view('content.perfil',compact('datos'));
+
+    }
+
+    public function editar_datos(){
+        
+    }
+
 
     public function logout()
     {

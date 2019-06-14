@@ -19,9 +19,7 @@ Route::any('/universidades/{nombre}','universidadesController@getUniversidad')->
 
 
 Route::get('/ranking', 'universidadesController@ranking')->name('ranking');
-Route::get('/{nombre}/perfil', function(){
-	return view('content.perfil');
-})->name('perfil');
+Route::get('/perfil','usuarioController@datos')->name('perfil');
 
 Route::get('/nosotros', function(){
 	return view('content.nosotros');

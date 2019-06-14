@@ -18,7 +18,7 @@
                            <H5 style="text-transform: capitalize;">Nombre: {{session('user_name')}}</H5>
                            </div>
                            <div class="form-group">
-                           <H5 >Correo: </H5>
+                           <H5 >Correo: {{$datos->correo}}</H5>
                            </div>
                            <div class="form-group">
                            <H5 >Edad: </H5>
