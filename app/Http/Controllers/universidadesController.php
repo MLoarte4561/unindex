@@ -56,6 +56,7 @@ class universidadesController extends Controller
 		$carreras = Universidades::where('nombre','=',$nombre)->first()->carreras;
 
 		$valoraciones = Valoracion::where('universidad',$nombre)->get();
+		print_r($nombre);exit;
 
 		return view('content.vista_universidad',compact('uni','carreras','valoraciones')); 
 	}
