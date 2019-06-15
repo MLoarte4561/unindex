@@ -86,11 +86,11 @@ class usuarioController extends Controller
     public function editar_datos(Request $res, $id){
 
         $nuevo = User::where('_id',$id)->first();
-        $nuevo -> nombre = $res->input('new_nombre');
+        $nuevo -> correo = $res->input('new_correo');
         $nuevo -> contrasenia = $res->input('new_pass');
         $nuevo->save();
 
-        return redirect('/');
+        return redirect('/perfil');
 
 
     }
