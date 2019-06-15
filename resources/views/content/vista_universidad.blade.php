@@ -1,7 +1,7 @@
 @extends('layout.index')
 @section('vista_unive')
   
-    <div class="site-blocks-cover inner-page-cover overlay" style="background-image: url('../{{$uni->imagen}}');" data-aos="fade" data-stellar-background-ratio="0.5">
+    <div class="site-blocks-cover inner-page-cover overlay" style="background-image: url('../{{$univ->imagen}}');" data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="container">
         <div class="row align-items-center justify-content-center text-center">
 
@@ -10,7 +10,7 @@
             
             <div class="row justify-content-center">
               <div class="col-md-8 text-center">
-                <h1 data-aos="fade-up">{{$uni->nombre}}</h1>
+                <h1 data-aos="fade-up">{{$univ->nombre}}</h1>
               </div>
             </div>
             
@@ -24,8 +24,8 @@
         <div class="row">
           <div class="col-md-7">
             <div class="row">
-              <h2 class="text-primary mb-3">¿Acerca de la {{$uni->nombre}}?</h2>
-              <p>{{$uni->acerca}}</p>
+              <h2 class="text-primary mb-3">¿Acerca de la {{$univ->nombre}}?</h2>
+              <p>{{$univ->acerca}}</p>
               <br>
             </div>
           </div>
@@ -33,12 +33,12 @@
           <div class="col-md-3 ml-auto">
             <div class="mb-5">
               <h3 class="h5 text-black mb-3">Información general</h3>
-                <p><strong>Dirección:</strong> {{$uni->direccion}}</p> 
-                <p><strong>Distrito: </strong>{{$uni->distrito}}</p>
-                <p><strong>Teléfono: </strong>{{$uni->telefono}}</p>
-                <p><strong>Correo: </strong>{{$uni->correo}}</p>
-                <p><strong>Tipo: </strong>{{$uni->tipo}}</p>
-                <p><strong><a href='{{$uni->web}}' target="_blank">Web</a></strong></p>
+                <p><strong>Dirección:</strong> {{$univ->direccion}}</p> 
+                <p><strong>Distrito: </strong>{{$univ->distrito}}</p>
+                <p><strong>Teléfono: </strong>{{$univ->telefono}}</p>
+                <p><strong>Correo: </strong>{{$univ->correo}}</p>
+                <p><strong>Tipo: </strong>{{$univ->tipo}}</p>
+                <p><strong><a href='{{$univ->web}}' target="_blank">Web</a></strong></p>
               </ul>
             </div>
           </div>

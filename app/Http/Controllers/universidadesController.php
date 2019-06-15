@@ -47,17 +47,17 @@ class universidadesController extends Controller
 
 	public function getUniversidad($nombre, Request $req){
 
-		if($nombre=='buscar'){
+		if($nombre == 'buscar'){
 			$nombre = $req->get('universidades');
 		}
 
-		$uni = universidades::where('nombre','=',$nombre)->first();
+		$univ = Universidades::where('nombre','=',$nombre)->first();
 
 		$carreras = Universidades::where('nombre','=',$nombre)->first()->carreras;
 
-		$valoraciones = Valoracion::where('universidad',$nombre)->get();
+		$valoraciones = Valoracion::where('universidad','=',$nombre)->get();
 
-		return view('content.vista_universidad',compact('uni','carreras','valoraciones')); 
+		return view('content.vista_universidad',compact('univ','carreras','valoraciones')); 
 	}
 
 	public function crearsugerencia(Request $request){
@@ -87,12 +87,7 @@ class universidadesController extends Controller
 	}
 
 
-	//Registrar universidad 
-	public function registrar_uni(Request $res){
-		$universidad = new Universidades;
-
-		$universidad -> nombre = $res -> input('');
-	}
+	
 
 	
 }
