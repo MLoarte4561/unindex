@@ -54,7 +54,9 @@
               <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block nav navbar-nav navbar-right">
                 <li ><a href="{{route('inicio')}}" style="color: white;"><span>Inicio</span></a></li>
                 <li ><a href="{{route('universidad')}}" style="color: white;"><span>Universidades</span></a></li>
-                <li><a href="{{route('ranking')}}" style="color: white;"><span>Ranking</span></a></li>
+                @if(Session::has('user_name'))
+                  <li><a href="{{route('ranking')}}" style="color: white;"><span>Ranking</span></a></li>  
+                @endif
                 <li><a href="{{route('nosotros')}}" style="color: white;"><span>Nosotros</span></a></li>
                 @if(Session::has('user_name'))
                 <li>
@@ -197,19 +199,19 @@
       <script src="{{URL::asset('js/bootstrap-datepicker.min.js')}}"></script>
       <script src="{{URL::asset('js/aos.js')}}"></script>
       <script src="{{URL::asset('js/rangeslider.min.js')}}"></script>
-            <script>
-            var typed = new Typed('.typed-words', {
-           strings: ['Carreras Universitarias', 'Ranking de Universidades'],
-            typeSpeed: 30,
-            backSpeed: 30,
-            backDelay: 2000,
-            startDelay: 1000,
-            loop: true,
-            showCursor: true
-            });
-            </script>
+      <script>
+      var typed = new Typed('.typed-words', {
+     strings: ['Carreras Universitarias', 'Ranking de Universidades'],
+      typeSpeed: 30,
+      backSpeed: 30,
+      backDelay: 2000,
+      startDelay: 1000,
+      loop: true,
+      showCursor: true
+      });
+      </script>
 
-  <script src="{{URL::asset('js/main.js')}}"></script>
+      <script src="{{URL::asset('js/main.js')}}"></script>
 
 
 </body>
