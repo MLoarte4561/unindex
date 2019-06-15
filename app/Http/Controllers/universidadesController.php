@@ -32,8 +32,15 @@ class universidadesController extends Controller
 	}
 
 	public function ranking(){
-		return view('content.ranking');
+		$ranking = Universidades::where('nombre','Pontificie Universidad Católica del Perú')
+					->orWhere('nombre','Universidad Peruana Cayetano Heredia')
+					->orWhere('nombre','Universidad Nacional Mayor de San Marcos')
+					->orWhere('nombre','Universidad Nacional Agraría de La Molina')
+					->orWhere('nombre','Universidad Nacional de Ingeniería')->get();
+		return view('content.ranking',compact('ranking'));
 	}
+
+
 
 	public function getUniversidad($nombre, Request $req){
 

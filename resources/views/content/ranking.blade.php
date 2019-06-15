@@ -27,96 +27,17 @@
         <div class="row">
           <div class="col-lg-8">
 
+            @foreach($ranking as $ran)
             <div class="d-block d-md-flex listing-horizontal">
-              <a href="#" class="img d-block" style="background-image: url('images/2.jpeg')">
+              <a href="#" class="img d-block" style="background-image: url('{{$ran->imagen}}')">
               </a>
               <div class="lh-content">
-                <a href="#" class="bookmark"><span class="icon-heart"></span></a>
-                <h3><a href="#">Universidad Nacional Mayor de San Marcos </a></h3>
-                <p>San Miguel, Lima</p>
-                <p>
-                  <span class="icon-star text-warning"></span>
-                  <span class="icon-star text-warning"></span>
-                  <span class="icon-star text-warning"></span>
-                  <span class="icon-star text-warning"></span>
-                  <span class="icon-star text-secondary"></span>
-                  <span>(3 Reviews)</span>
-                </p>
+                <h3><a href="#">{{$ran->nombre}}</a></h3>
+                <p>{{$ran->distrito}}</p>
               </div>
             </div>
 
-            <div class="d-block d-md-flex listing-horizontal">
-                <a href="#" class="img d-block" style="background-image: url('images/2.jpeg')">
-                </a>
-                <div class="lh-content">
-                  <a href="#" class="bookmark"><span class="icon-heart"></span></a>
-                  <h3><a href="#">Universidad Nacional Mayor de San Marcos </a></h3>
-                  <p>San Miguel, Lima</p>
-                  <p>
-                    <span class="icon-star text-warning"></span>
-                    <span class="icon-star text-warning"></span>
-                    <span class="icon-star text-warning"></span>
-                    <span class="icon-star text-warning"></span>
-                    <span class="icon-star text-secondary"></span>
-                    <span>(3 Reviews)</span>
-                  </p>
-                </div>
-              </div>
-
-              <div class="d-block d-md-flex listing-horizontal">
-                  <a href="#" class="img d-block" style="background-image: url('images/2.jpeg')">
-                  </a>
-                  <div class="lh-content">
-                    <a href="#" class="bookmark"><span class="icon-heart"></span></a>
-                    <h3><a href="#">Universidad Nacional Mayor de San Marcos </a></h3>
-                    <p>San Miguel, Lima</p>
-                    <p>
-                      <span class="icon-star text-warning"></span>
-                      <span class="icon-star text-warning"></span>
-                      <span class="icon-star text-warning"></span>
-                      <span class="icon-star text-warning"></span>
-                      <span class="icon-star text-secondary"></span>
-                      <span>(3 Reviews)</span>
-                    </p>
-                  </div>
-                </div>
-
-                <div class="d-block d-md-flex listing-horizontal">
-                    <a href="#" class="img d-block" style="background-image: url('images/2.jpeg')">
-                    </a>
-                    <div class="lh-content">
-                      <a href="#" class="bookmark"><span class="icon-heart"></span></a>
-                      <h3><a href="#">Universidad Nacional Mayor de San Marcos </a></h3>
-                      <p>San Miguel, Lima</p>
-                      <p>
-                        <span class="icon-star text-warning"></span>
-                        <span class="icon-star text-warning"></span>
-                        <span class="icon-star text-warning"></span>
-                        <span class="icon-star text-warning"></span>
-                        <span class="icon-star text-secondary"></span>
-                        <span>(3 Reviews)</span>
-                      </p>
-                    </div>
-                  </div>
-
-                  <div class="d-block d-md-flex listing-horizontal">
-                      <a href="#" class="img d-block" style="background-image: url('images/2.jpeg')">
-                      </a>
-                      <div class="lh-content">
-                        <a href="#" class="bookmark"><span class="icon-heart"></span></a>
-                        <h3><a href="#">Universidad Nacional Mayor de San Marcos </a></h3>
-                        <p>San Miguel, Lima</p>
-                        <p>
-                          <span class="icon-star text-warning"></span>
-                          <span class="icon-star text-warning"></span>
-                          <span class="icon-star text-warning"></span>
-                          <span class="icon-star text-warning"></span>
-                          <span class="icon-star text-secondary"></span>
-                          <span>(3 Reviews)</span>
-                        </p>
-                      </div>
-                    </div>
-
+           @endforeach
 
 
           </div>
