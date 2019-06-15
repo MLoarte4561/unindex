@@ -17,12 +17,19 @@
                    	{{csrf_field()}}
                            <div class="form-group">
                               <label for="exampleInputEmail1">Ingresa tu correo</label>
-                              <input type="email" name="email"  class="form-control" id="email" aria-describedby="emailHelp" placeholder="Correo">
+                              <input type="email" name="email"  class="form-control" id="email" aria-describedby="emailHelp" placeholder="Correo" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}">
                            </div>
                            <div class="form-group">
                               <label for="exampleInputEmail1">Ingresa tu contraseña</label>
                               <input type="password" name="password" id="password"  class="form-control" aria-describedby="emailHelp" placeholder="Contraseña">
-                           </div><br>
+                           </div>
+                           @if(Session::has('message'))
+                            <div class="form-group">
+                              <div class="alert alert-primary" role="alert">
+                                {{Session('message')}}
+                              </div>
+                            </div>
+                          @endif
                            <div class="col-md-12 text-center ">
                               <button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm">Ingresar</button>
                            </div>

@@ -46,6 +46,8 @@ Route::get('admin',function(){
 	return view('admin_content.login_admin');
 })->name('login_admin');
 
+Route::post('admin','adminController@loginAdm')->name('log');
+
 
 Route::get('admin/home','adminController@index')->name('admin');
 

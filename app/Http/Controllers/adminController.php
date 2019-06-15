@@ -16,6 +16,7 @@ class adminController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
         //Cantidades de valores

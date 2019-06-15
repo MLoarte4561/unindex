@@ -19,7 +19,12 @@
                   <!-- Add the bg color to the header using any of the bg-* classes -->
                   <div class="widget-user-header bg-aqua-active">
                     <h3 class="widget-user-username">{{$users->nombre}}</h3>
+                 
+                    @if($users->tipo == 1)
                     <h5 class="widget-user-desc">Estudiante</h5>
+                    @else
+                    <h5 class="widget-user-desc">Administrador</h5>
+                    @endif
                   </div>
                   <div class="box-footer">
                     {{$users->correo}}

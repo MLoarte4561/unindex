@@ -65,21 +65,21 @@
                   <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                       <img src="{{URL::asset('images/avatar5.png')}}" class="user-image" alt="User Image">
-                      <span class="hidden-xs">Usuario</span>
+                        <span class="hidden-xs">{{session('user_name')}}</span>
                     </a>
                     <ul class="dropdown-menu">
                       <!-- User image -->
                       <li class="user-header">
                         <img src="{{URL::asset('images/avatar5.png')}}" class="img-circle" alt="User Image">
                         <p>
-                         Usuario
+                         {{session('user_name')}}
                         </p>
                       </li>
                       <!-- Menu Body -->
                       <li class="user-body">
                       
                         <div class="pull-right">
-                          <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                          <a href="{{action('usuarioController@logout')}}" class="btn btn-default btn-flat">Salir</a>
                         </div>
                       </li>
                     </ul>
@@ -100,7 +100,7 @@
                 <img src="{{URL::asset('images/avatar5.png')}}" class="img-circle" alt="User Image">
               </div>
               <div class="pull-left info">
-                <p>Usuario</p>
+                <p>{{session('user_name')}}</p>
               </div>
             </div>
             <!-- search form -->
