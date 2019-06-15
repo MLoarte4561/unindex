@@ -1,7 +1,7 @@
 @extends('layout.index')
 @section('vista_unive')
   
-    <div class="site-blocks-cover inner-page-cover overlay" style="background-image: url('../{{$univ->imagen}}');" data-aos="fade" data-stellar-background-ratio="0.5">
+    <div class="site-blocks-cover inner-page-cover overlay" style="background-image: url('{{URL::asset($univ->imagen)}}');" data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="container">
         <div class="row align-items-center justify-content-center text-center">
 
@@ -107,11 +107,11 @@
                       <div class="row justify-content-center mb-5">
                         <div class="col-md-8 mb-5 "  data-aos="fade">
             
-                          <form action="{{route('valoracion',$uni->nombre)}}" method="post" class="p-4 bg-white">
+                          <form action="{{route('valoracion',$univ->nombre)}}" method="post" class="p-4 bg-white">
                             {{csrf_field()}}
                             <div class="row form-group">
                               <div class="col-md-12"> 
-                                <textarea name="universidad" rows="1" class="form-control" readonly>{{$uni->nombre}}</textarea>
+                                <textarea name="universidad" rows="1" class="form-control" readonly>{{$univ->nombre}}</textarea>
                               </div>
                             </div>
                             <div class="row form-group">
