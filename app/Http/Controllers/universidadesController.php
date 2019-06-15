@@ -86,5 +86,13 @@ class universidadesController extends Controller
 
 	}
 
+
+	//Registrar universidad 
+	public function registrar_uni(Request $res){
+		$universidad = new Universidades;
+
+		$universidad -> nombre = $res -> input('');
+	}
+
 	
 }
