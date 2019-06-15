@@ -20,7 +20,6 @@
         </div>
       </div>
     </div>  
-    
 
     <div class="site-section">
       <div class="container">
@@ -36,7 +35,6 @@
                 <p>{{$ran->distrito}}</p>
               </div>
             </div>
-
            @endforeach
 
 
