@@ -50,17 +50,8 @@ class usuarioController extends Controller
     {
 
         $usu = $request->get('email');
-        $pwd = $request->get('password');
+        $pwd = encrypt($request->get('password'));
         $user = User::where('correo',$usu)->where('contrasenia',$pwd)->where('tipo',1)->first();
-
-        Session::flash('message_lon_user','El correo que ingresó es incorrecto');
-        return Redirect::to('/login');
-
-        if(){
-
-        }
-
-
 
         if(!is_null($user)){
             session()->put('user_name', $user->nombre);
