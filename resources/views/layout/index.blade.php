@@ -121,7 +121,7 @@
         <div class="row">
           <div class="col-md-12">
             <div class="row">
-              <div class="col-md-5">
+              <div class="col-md-4">
                 <h2 class="footer-heading mb-3">Enlaces</h2>
                 <ul class="list-unstyled">
                   <li><a href="{{route('inicio')}}">Inicio</a></li>
@@ -137,30 +137,31 @@
 
                 </ul>
               </div>
-              <div class="col-md-5">
+              <div class="col-md-4">
                 <h2 class="footer-heading mb-3">Infomarción del Sistema</h2>
                 <ul class="list-unstyled">
                   <li><a href="{{route('nosotros')}}">Nosotros</a></li>
                 </ul>
               </div>
-              <div class="col-md-2">
-                <h2 class="footer-heading mb-4">Contactos: </h2>
-                <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
-                <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
-                <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
-                <p>Edwin Arévalo</p>
+              <div class="col-md-3">
+                <h2 class="footer-heading mb-3" align="center">  Contactos </h2>
+                <a href="https://www.facebook.com/profile.php?id=100009491258220" class="pl-0 pr-3" target="_blank"><span class="icon-facebook"></span></a>
+                <a href="https://www.instagram.com/williamewas/" class="pl-3 pr-3" target="_blank"><span class="icon-instagram"></span></a>
+                <a href="https://www.linkedin.com/in/edwin-william-ar%C3%A9valo-serme%C3%B1o-2802ba181/" class="pl-3 pr-3" target="_blank"><span class="icon-linkedin"></span></a>
+                <span style="color:antiquewhite;">Edwin Arévalo</span>
                 <div class="mt-3"></div>
                 
-                <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
-                <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
-                <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
-                <p>Moisés Loarte</p>
+                <a href="https://www.facebook.com/moises.loarte" class="pl-0 pr-3"target="_blank"><span class="icon-facebook"></span></a>
+                <a href="https://www.instagram.com/moises_loarte/" class="pl-3 pr-3" target="_blank"><span class="icon-instagram"></span></a>
+                <a href="https://www.linkedin.com/in/mois%C3%A9s-loarte-cerd%C3%A1n-0a7228175/" class="pl-3 pr-3" target="_blank"><span class="icon-linkedin"></span></a>
+                <span style="color:antiquewhite;">Moisés Loarte</span>
                 <div class="mt-3"></div>
 
-                <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
-                <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
-                <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>        
-                <p>Marcelo Cuellar</p>
+                <a href="https://www.facebook.com/marceloarmando.cuellarrosas" class="pl-0 pr-3" target="_blank"><span class="icon-facebook"></span></a>
+                <a href="https://www.instagram.com/marcelcr98/" class="pl-3 pr-3" target="_blank"><span class="icon-instagram"></span></a>
+                <a href="https://www.linkedin.com/in/marcelo-cuellar-rosas-ab6104189/" class="pl-3 pr-3" target="_blank"><span class="icon-linkedin"></span></a>        
+                <span style="color:antiquewhite;">Marcelo Cuellar</span>
+                
               </div>
 
             </div>
@@ -172,7 +173,7 @@
             <div class="border-top pt-3">
             <p>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos los derechos reservados | Tecsup</a>
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos los derechos reservados | Unindex</a>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             </p>
             </div>
