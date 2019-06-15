@@ -60,34 +60,12 @@
                 <li><a href="{{route('nosotros')}}" style="color: white;"><span>Nosotros</span></a></li>
                 @if(Session::has('user_name'))
                 <li>
-
-                                      <ul class="dropdown-menu">
-                      <!-- User image -->
-                      <li class="user-header">
-                        <img src="../../dist/img/avatar5.png" class="img-circle" alt="User Image">
-                        <p>
-                         Usuario
-                        </p>
-                      </li>
-                      <!-- Menu Body -->
-                      <li class="user-body">
-                      
-                        <div class="pull-right">
-                          <a href="#" class="btn btn-default btn-flat">Sign out</a>
-                        </div>
-                      </li>
-                    </ul>
-                  <a href="{{route('perfil')}}">
+                  <a href="{{route('perfil',session('user_name'))}}">
                     <span style="color: white;">
-
                       {{session('user_name')}}
-
                     </span>
-
                   </a>
                 </li>
-
-                  
                 
                 @else
                 <li>

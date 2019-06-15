@@ -51,14 +51,11 @@ class universidadesController extends Controller
 			$nombre = $req->get('universidades');
 		}
 
-		$univ = Universidades::where('nombre','=',$nombre)->first();
+		$univ = Universidades::where('nombre',$nombre)->first();
 
-		$carreras = Universidades::where('nombre','=',$nombre)->first()->carreras;
+		$carreras = Universidades::where('nombre',$nombre)->first()->carreras;
 
 		$valoraciones = Valoracion::where('universidad',$nombre)->get();
-
-		$valoraciones = Valoracion::where('universidad','=',$nombre)->get();
-
 
 		return view('content.vista_universidad',compact('univ','carreras','valoraciones')); 
 	}

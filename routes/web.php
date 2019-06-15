@@ -15,14 +15,14 @@ Route::get('/', 'universidadesController@distritos')->name('inicio');
 Route::post('/sugerencia','universidadesController@crearsugerencia')->name('sugerencia');
 
 Route::get('/universidades','universidadesController@universidad')->name('universidad');
-Route::any('/{nombre}','universidadesController@getUniversidad')->name('uni');
+Route::any('/universidad/{nombre}','universidadesController@getUniversidad')->name('uni');
 
 Route::post('/universidades/{nombre}','universidadesController@valoracion')->name('valoracion');
 
 
 Route::get('/ranking', 'universidadesController@ranking')->name('ranking');
 
-Route::get('/perfil','usuarioController@datos')->name('perfil');
+Route::any('/perfil','usuarioController@datos')->name('perfil');
 
 Route::get('/{id}/editar_perfil', 'usuarioController@edit')->name('editar');
 Route::post('/{id}/editar_perfil','usuarioController@editar_datos')->name('new');
