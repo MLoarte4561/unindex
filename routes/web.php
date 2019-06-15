@@ -17,7 +17,7 @@ Route::post('/sugerencia','universidadesController@crearsugerencia')->name('suge
 Route::get('/universidades','universidadesController@universidad')->name('universidad');
 Route::any('/universidades/{nombre}','universidadesController@getUniversidad')->name('uni');
 
-Route::post('/universidades/{nombre}','universidadesController@valoracion')->name('valoracion');
+Route::post('/universidades/{nombre}/#','universidadesController@valoracion')->name('valoracion');
 
 
 Route::get('/ranking', 'universidadesController@ranking')->name('ranking');
