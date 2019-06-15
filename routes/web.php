@@ -47,17 +47,11 @@ Route::get('admin',function(){
 })->name('login_admin');
 
 
-Route::get('admin/home',function(){
-	return view('admin_content.index_admin');
-})->name('admin');
+Route::get('admin/home','adminController@index')->name('admin');
 
-Route::get('admin/usuarios',function(){
-	return view('admin_content.usuarios_admin');
-})->name('usuarios');
+Route::get('admin/usuarios','adminController@getUsuarios')->name('usuarios');
 
-Route::get('admin/sugerencias',function(){
-	return view('admin_content.sugerencias_admin');
-})->name('sugerencias');
+Route::get('admin/sugerencias','adminController@getSugerencias')->name('sugerencias');
 
 
 Route::get('admin/universidades',function(){
