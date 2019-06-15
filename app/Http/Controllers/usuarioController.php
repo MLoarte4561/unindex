@@ -51,24 +51,22 @@ class usuarioController extends Controller
 
         $usu = $request->get('email');
         $pwd = $request->get('password');
-        $user = User::where('correo',$usu)->where('contrasenia',$pwd)->first();
-        if($user->tipo == 1){
-            if(!is_null($user)){
-                session()->put('user_name', $user->nombre);
-                return redirect('/');
-            }
-        }else if($user->tipo == 2){
-            if(!is_null($user)){
-                session()->put('user_name', $user->nombre);
-                return redirect('/admin/home');
-            }}
-            else{
-            Session::flash('message','El correo y/o la contraseña son incorrectos');
+        $user = User::where('correo',$usu)->where('contrasenia',$pwd)->where('tipo',1)->first();
+        $user2 = User::where('correo',$usu)->where('contrasenia',$pwd)->where('tipo',2)->first();
+        if(!is_null($user)){
+            session()->put('user_name', $user->nombre);
+            return redirect('/');
+        }elseif (!is_null($user2)) {
+            session()->put('user_name', $user2->nombre);
+            return redirect('/admin/home');
+        }else{
+            Session::flash('message','El correo y/o la contraseña son incorrectas');
             return Redirect::to('/login');
-            }
-            
         }
+
+            
     }
+    
 
     public function datos(){
         $datos = User::where("nombre",session('user_name'))->first();
