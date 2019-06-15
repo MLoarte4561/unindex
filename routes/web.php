@@ -17,6 +17,8 @@ Route::post('/sugerencia','universidadesController@crearsugerencia')->name('suge
 Route::get('/universidades','universidadesController@universidad')->name('universidad');
 Route::any('/universidades/{nombre}','universidadesController@getUniversidad')->name('uni');
 
+Route::post('/universidades/{nombre}','universidadesController@valoracion')->name('valoracion');
+
 
 Route::get('/ranking', 'universidadesController@ranking')->name('ranking');
 
@@ -57,9 +59,6 @@ Route::get('admin/sugerencias',function(){
 	return view('admin_content.sugerencias_admin');
 })->name('sugerencias');
 
-Route::get('admin/graficos',function(){
-	return view('admin_content.graficos_admin');
-})->name('graficos');
 
 Route::get('admin/universidades',function(){
 	return view('admin_content.universidades_admin');

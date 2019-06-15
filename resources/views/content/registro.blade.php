@@ -44,13 +44,13 @@
                 <input type="email" id="correo" class="form-control" placeholder="Correo" name="correo" required >
                 <label for="correo">Correo</label>
               </div>
+
               @if(Session::has('message'))
-              <div class="form-group">
-                <div class="alert alert-primary" role="alert">
-                  {{Session('message')}}
+                <div class="form-group">
+                  <div class="alert alert-primary" role="alert">
+                    {{Session('message')}}
+                  </div>
                 </div>
-              </div>
-                
               @endif
 
 				      <div class="form-label-group">

@@ -37,7 +37,7 @@ class usuarioController extends Controller
             $User -> tipo = 1;
             $User -> correo = $request -> input('correo');
             $User -> fecha_nacimiento = $request -> input('fecha');
-            $User -> contrasenia = bcrypt($request -> input('contrasenia'));
+            $User -> contrasenia = $request -> input('contrasenia');
 
             $User -> save();
             return redirect('/login');
@@ -52,15 +52,6 @@ class usuarioController extends Controller
         $usu = $request->get('email');
         $pwd = $request->get('password');
         $user = User::where('correo',$usu)->where('contrasenia',$pwd)->where('tipo',1)->first();
-
-        Session::flash('message_lon_user','El correo que ingresó es incorrecto');
-        return Redirect::to('/login');
-
-        if(){
-
-        }
-
-
 
         if(!is_null($user)){
             session()->put('user_name', $user->nombre);

@@ -125,12 +125,6 @@
                 </ul>
               </li>
 
-              <li>
-                    <a href="{{route('graficos')}}">
-                      <i class="fa fa-pie-chart"></i> <span>Graficos</span>
-                    </a>
-                  </li>
-
                   <li>
                         <a href="{{route('universidades')}}">
                           <i class="fa fa-edit"></i> <span>Actualizar Universidades</span>
@@ -154,7 +148,6 @@
       @yield('ad_inicio')
       @yield('ad_usuarios')
       @yield('ad_sugerencias')
-      @yield('ad_graficos')
       @yield('ad_universidades')
       @yield('ad_noticias')
 
