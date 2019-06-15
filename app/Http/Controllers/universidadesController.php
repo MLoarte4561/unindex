@@ -10,7 +10,10 @@ use App\User;
 
 use App\Sugerencia;
 
+use App\Valoracion;
+
 use Illuminate\Http\Request;
+
 
 
 class universidadesController extends Controller
@@ -32,7 +35,7 @@ class universidadesController extends Controller
 	}
 
 	public function ranking(){
-		$ranking = Universidades::where('nombre','Pontificie Universidad Católica del Perú')
+		$ranking = Universidades::where('nombre','Pontificia Universidad Católica del Perú')
 					->orWhere('nombre','Universidad Peruana Cayetano Heredia')
 					->orWhere('nombre','Universidad Nacional Mayor de San Marcos')
 					->orWhere('nombre','Universidad Nacional Agraría de La Molina')
@@ -52,7 +55,9 @@ class universidadesController extends Controller
 
 		$carreras = Universidades::where('nombre','=',$nombre)->first()->carreras;
 
-		return view('content.vista_universidad',compact('uni','carreras')); 
+		$valoraciones = Valoracion::where('universidad',$nombre)->get();
+
+		return view('content.vista_universidad',compact('uni','carreras','valoraciones')); 
 	}
 
 	public function crearsugerencia(Request $request){
@@ -67,5 +72,19 @@ class universidadesController extends Controller
         return redirect('/');
 
 	}
+
+	public function valoracion(Request $request, $nombre){
+
+		$valoracion = new Valoracion;
+
+		$valoracion -> universidad = $request -> input('universidad');
+		$valoracion -> descripcion = $request -> input('valoracion');
+
+		$valoracion -> save();
+
+		return redirect('/universidades');
+
+	}
+
 	
 }

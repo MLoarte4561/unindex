@@ -37,7 +37,7 @@ class usuarioController extends Controller
             $User -> tipo = 1;
             $User -> correo = $request -> input('correo');
             $User -> fecha_nacimiento = $request -> input('fecha');
-            $User -> contrasenia = bcrypt($request -> input('contrasenia'));
+            $User -> contrasenia = $request -> input('contrasenia');
 
             $User -> save();
             return redirect('/login');

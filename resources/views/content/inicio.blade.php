@@ -139,37 +139,36 @@
 
 
     @if(Session::has('user_name'))
-    <div class="site-section bg-light">
-              <div class="row justify-content-center mb-5">
+        <div class="site-section bg-light">
+          <div class="row justify-content-center mb-5">
             <div class="col-md-7 text-center border-primary">
               <h2 class="font-weight-light text-primary">¿Cómo podemos mejorar tu experiencia?</h2>
               <p class="color-black-opacity-5">Realiza tu sugerencia para mejorar nuestro sistema web</p>
             </div>
           </div>
-        <div class="container ">
-          <div class="row justify-content-center mb-5">
-            <div class="col-md-8 mb-5 "  data-aos="fade">
+          <div class="container ">
+            <div class="row justify-content-center mb-5">
+              <div class="col-md-8 mb-5 "  data-aos="fade">
   
-              <form action="{{route('sugerencia')}}" method="post" class="p-4 bg-white">
-                {{csrf_field()}}
-                <div class="row form-group">
-                  <div class="col-md-12"> 
-                    <textarea name="mensaje" id="message" cols="30" rows="7" class="form-control" placeholder="Escribe aquí tu sugerencia.."></textarea>
+                <form action="{{route('sugerencia')}}" method="post" class="p-4 bg-white">
+                  {{csrf_field()}}
+                  <div class="row form-group">
+                    <div class="col-md-12"> 
+                      <textarea name="mensaje" id="message" cols="30" rows="7" class="form-control" placeholder="Escribe aquí tu sugerencia.."></textarea>
+                    </div>
                   </div>
-                </div>
   
-                <div class="row form-group">
-                  <div class="col-md-12">
-                    <input type="submit" value="Enviar" class="btn btn-primary py-2 px-4 text-white">
+                  <div class="row form-group">
+                    <div class="col-md-12">
+                      <input type="submit" value="Enviar" class="btn btn-primary py-2 px-4 text-white">
+                    </div>
                   </div>
-                </div>
-  
-    
-              </form>
+                </form>
+
+              </div>
             </div>
           </div>
         </div>
-      </div>
       @else
       
 

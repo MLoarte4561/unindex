@@ -38,7 +38,7 @@
            @endforeach
            <hr>
            <div class="container">
-             <p>Esta sección está basada en una investigación sobre las mejores universidades de Lima en 2019. <br>Fuente: <a href="https://www.rankia.pe/blog/mejores-opiniones-peru/4092827-mejores-universidades-peru-2019">https://www.rankia.pe/blog/mejores-opiniones-peru/4092827-mejores-universidades-peru-2019</a></p>
+             <p>Esta sección está basada en una investigación sobre las mejores universidades de Lima en 2019. <br>Fuente: <a href="https://www.rankia.pe/blog/mejores-opiniones-peru/4092827-mejores-universidades-peru-2019" target="_blank">https://www.rankia.pe/blog/mejores-opiniones-peru/4092827-mejores-universidades-peru-2019</a></p>
            </div>
 
           </div>

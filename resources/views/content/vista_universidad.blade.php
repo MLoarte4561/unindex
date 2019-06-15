@@ -47,71 +47,90 @@
     </div>
         
 
-          <div class="row justify-content-center mb-5">
+              <div class="row justify-content-center mb-5">
                 <div class="col-md-7 text-center border-primary">
                   <h2 class="font-weight-light text-primary">Carreras de la Universidad</h2>
                   <p class="color-black-opacity-5">Visualiza las carreras que ofrece</p>
                 </div>
 
                 @foreach($carreras as $car)
-                <div class="container">
-                  <div class="accordion" id="accordionExample">
-                    <div class="card">
-                      <div class="card-header" id="headingOne">
-                        <h2 class="mb-0">
-                          <button class="btn btn-link"  data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" disabled style="color: blue;">
-                            {{$car->nombres}}
-                          </button>
-                        </h2>
-                      </div>
+                  <div class="container">
+                    <div class="accordion" id="accordionExample">
+                      <div class="card">
+                        <div class="card-header" id="headingOne">
+                          <h2 class="mb-0">
+                            <button class="btn btn-link"  data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" disabled style="color: blue;">
+                              {{$car->nombres}}
+                            </button>
+                          </h2>
+                        </div>
 
-                      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                        <div class="card-body">
-                          {{$car->descripcion}}<br><br>
-                        <a href="{{$car->curricula}}" class="btn btn-primary" target="_blank">Ver currícula</a>
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                          <div class="card-body">
+                            {{$car->descripcion}}<br><br>
+                          <a href="{{$car->curricula}}" class="btn btn-primary" target="_blank">Ver currícula</a>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
                 @endforeach
-            </div>
+              </div>
 
               <div class="row justify-content-center mb-5">
                 <div class="col-md-7 text-center border-primary">
                   <h2 class="font-weight-light text-primary">Comentarios</h2>
                   <p class="color-black-opacity-5">Comentarios respecto a la información de la universidad</p>
                 </div>
-
               </div>
 
-            
-                
+              @foreach($valoraciones as $valo)
+                <center>
+                  <div class="col-md-7" style="text-align: left;">
+                    <div class="alert alert-primary" role="alert">
+                      {{$valo->descripcion}}
+                    </div>
+                  </div>
+                </center>
 
-                  
+              @endforeach
+
                   @if(Session::has('user_name'))
-                  <div class="row justify-content-center mb-5">
-                <div class="col-md-7 text-center border-primary">
-                  <h2 class="font-weight-light text-primary">Realiza una Valoracion sobre la Universidad</h2>
-                  <p class="color-black-opacity-5">Realiza valoraciones sobre la universidad</p>
-                </div>
-              </div>
-            <div class="container">
-              <div class="row">
-                <div class="col-md-7 mb-3"  data-aos="fade">
-                  <form action="{{route('sugerencia',$uni->nombre,session('user_name'))}}" class="p-5 bg-white">
-                    <div class="row form-group">
-                      <div class="col-md-12">
-                        <label class="text-black" for="message">Mensaje</label> 
-                        <textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Escribe aquí tu sugerencia.." required></textarea>
+                  <div class="site-section bg-light">
+                    <div class="row justify-content-center mb-5">
+                      <div class="col-md-7 text-center border-primary">
+                        <h2 class="font-weight-light text-primary">Escribe tu opinión sobre la universidad</h2>
+                        <p class="color-black-opacity-5">Realiza tu valoración</p>
                       </div>
                     </div>
-                    <div class="row form-group">
-                      <div class="col-md-12">
-                        <input type="submit" value="Enviar Valoracion" class="btn btn-primary py-2 px-4 text-white">
+                    <div class="container ">
+                      <div class="row justify-content-center mb-5">
+                        <div class="col-md-8 mb-5 "  data-aos="fade">
+            
+                          <form action="{{route('valoracion',$uni->nombre)}}" method="post" class="p-4 bg-white">
+                            {{csrf_field()}}
+                            <div class="row form-group">
+                              <div class="col-md-12"> 
+                                <textarea name="universidad" rows="1" class="form-control" readonly>{{$uni->nombre}}</textarea>
+                              </div>
+                            </div>
+                            <div class="row form-group">
+                              <div class="col-md-12"> 
+                                <textarea name="valoracion" id="message" cols="30" rows="7" class="form-control" placeholder="Escribe aquí tu opinión.." required></textarea>
+                              </div>
+                            </div>
+            
+                            <div class="row form-group">
+                              <div class="col-md-12">
+                                <input type="submit" value="Enviar" class="btn btn-primary py-2 px-4 text-white">
+                              </div>
+                            </div>
+                          </form>
+
+                        </div>
                       </div>
                     </div>
-                  </form>
+                  </div>
 
                   @else
                   <div class="py-5 bg-primary">
