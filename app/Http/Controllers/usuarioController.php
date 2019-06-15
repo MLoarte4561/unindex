@@ -52,20 +52,19 @@ class usuarioController extends Controller
         $usu = $request->get('email');
         $pwd = $request->get('password');
         $user = User::where('correo',$usu)->where('contrasenia',$pwd)->first();
-        if($user->tipo==1){
+        if($user->tipo == 1){
             if(!is_null($user)){
                 session()->put('user_name', $user->nombre);
                 return redirect('/');
             }
-        }else if($user->tipo==2){
+        }else if($user->tipo == 2){
             if(!is_null($user)){
                 session()->put('user_name', $user->nombre);
                 return redirect('/admin/home');
-            }
-        else
-        {
-                Session::flash('message','El correo y/o la contraseña son incorrectos');
-                return Redirect::to('/login');
+            }}
+            else{
+            Session::flash('message','El correo y/o la contraseña son incorrectos');
+            return Redirect::to('/login');
             }
             
         }
