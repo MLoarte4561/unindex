@@ -37,7 +37,7 @@
           <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
               <p>Somos un equipo íntegro de innovadores que buscan ganar experiencia mediante el desarrollo
                  de aplicaciones y sistemas web. </p> <p> Estudiamos la carrera Diseño de Software e integración de Sistemas
-                del instituto tecnológico superior Tecsup, </p>
+                del instituto tecnológico superior Tecsup. </p>
           </div>
           <div class="col-md-6 col-lg-3 mb-4 mb-lg-0 mt-md-5">
             <img src="images/person_4.jpg" alt="Image" class="img-fluid mb-3">
@@ -45,7 +45,7 @@
             <p class="caption text-primary">Programador</p>
           </div>
           <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
-            <img src="images/person_4.jpg" alt="Image" class="img-fluid mb-3">
+            <img src="images/william.jpg" alt="Image" class="img-fluid mb-3">
             <h3 class="h4">Edwin Arévalo</h3>
             <p class="caption text-primary">Analista</p>
           </div>
