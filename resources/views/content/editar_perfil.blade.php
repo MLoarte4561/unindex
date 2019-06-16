@@ -13,7 +13,7 @@
                 <label for="nombre">{{$datos_user->correo}}</label>
               </div>  
               <div class="form-label-group">
-                <input type="password" id="inputPassword"  name="new_pass" class="form-control" placeholder="Nueva contraseña" name="contrasenia" required pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}">
+                <input type="password" id="inputPassword"  name="new_pass" class="form-control" placeholder="Nueva contraseña" name="contrasenia" required>
                 <label for="inputPassword">Nueva contraseña</label>
               </div>           
               <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Actualizar</button>
