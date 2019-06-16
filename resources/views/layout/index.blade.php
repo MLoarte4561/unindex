@@ -57,6 +57,9 @@
                 @if(Session::has('user_name'))
                   <li><a href="{{route('ranking')}}" style="color: white;"><span>Ranking</span></a></li>  
                 @endif
+                @if(Session::has('user_name'))
+                  <li><a href="{{route('test')}}" style="color: white;"><span>Test Vocacional</span></a></li>  
+                @endif
                 <li><a href="{{route('nosotros')}}" style="color: white;"><span>Nosotros</span></a></li>
                 @if(Session::has('user_name'))
                 <li>
@@ -89,10 +92,12 @@
     @yield('universidades')
     @yield('vista_unive')
     @yield('ranking')
+    @yield('test')
     @yield('nosotros')
     @yield('login')
     @yield('perfil')
     @yield('editar')
+    
       
       <footer class="site-footer">
       <div class="container">

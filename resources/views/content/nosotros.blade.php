@@ -50,7 +50,7 @@
             <p class="caption text-primary">Analista</p>
           </div>
           <div class="col-md-6 col-lg-3 mb-4 mb-lg-0 mt-md-5">
-            <img src="images/person_4.jpg" alt="Image" class="img-fluid mb-3">
+            <img src="images/marcelo-cuellar.jpg" alt="Image" class="img-fluid mb-3">
             <h3 class="h4">Marcelo Cuéllar</h3>
             <p class="caption text-primary">Diseñador</p>
           </div>
@@ -73,6 +73,7 @@
                acceder los padres de familia y docentes.</p>
 
             <ul class="ul-check list-unstyled success">
+              <li>Tendrás la oportunidad de realizar un test de orientación vocaccional al registrarte.</li>
               <li>Podrás observar todas las carreras de las universidades certificadas de Lima Metropolitana.</li>
               <li>Realizarás consultas por universidades.</li>
               <li>Regístrate para poder acceder al ranking académico.</li>
