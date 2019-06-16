@@ -113,24 +113,25 @@
         <div class="row justify-content-center mb-5">
           <div class="col-md-7 text-center border-primary">
             <h2 class="font-weight-light text-primary">Noticias</h2>
-            <p class="color-black-opacity-5">Entérate de las ultimas noticias sobre las universidades licensiadas</p>
+            <p class="color-black-opacity-5">Entérate de las ultimas noticias sobre universidades.</p>
           </div>
         </div>
         <div class="row mb-3 align-items-stretch">
           <div class="col-md-6 col-lg-6 mb-4 mb-lg-4">
             <div class="h-entry">
-              <img src="images/4.jpg" alt="Image" class="img-fluid">
-              <h2 class="font-size-regular"><a href="#">UPC</a></h2>
-              <div class="meta mb-4">by Theresa Winston <span class="mx-2">&bullet;</span> Jan 18, 2019 at 2:00 pm <span class="mx-2">&bullet;</span> <a href="#">El Comercio</a></div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eligendi nobis ea maiores sapiente veritatis reprehenderit suscipit quaerat rerum voluptatibus a eius.</p>
+              <a a href="https://elperuano.pe/noticia-la-universidad-tecnologica-del-peru-obtiene-licenciamiento-80453.aspx" target="_blank"><img src="images/5.jpg" alt="Image" class="img-fluid" ></a>
+              <h2 class="font-size-regular"><p>Nuevo licenciamiento: UTP</p></h2>
+              <div class="meta mb-4">Lo último<span class="mx-2">&bullet;</span>  Junio 13, 2019 <span class="mx-2">&bullet;</span> <a href="https://elperuano.pe/noticia-la-universidad-tecnologica-del-peru-obtiene-licenciamiento-80453.aspx" target="_blank">ElPeruano</a></div>
+              <p>La Superintendencia Nacional de Educación Superior Universitaria (Sunedu) ha otorgado el licenciamiento institucional por seis años a la Universidad Tecnológica del Perú (UTP), luego de corroborar que dicha casa de estudios reúne las condiciones básicas de calidad (CBC) indispensables para ofrecer el servicio educativo de nivel universitario en el Perú.
+</p>
             </div> 
           </div>
           <div class="col-md-6 col-lg-6 mb-4 mb-lg-4">
             <div class="h-entry">
-              <img src="images/5.jpeg" alt="Image" class="img-fluid">
-              <h2 class="font-size-regular"><a href="#">PUCP</a></h2>
-              <div class="meta mb-4">by Theresa Winston <span class="mx-2">&bullet;</span> Jan 18, 2019 at 2:00 pm <span class="mx-2">&bullet;</span> <a href="#">Peru 21</a></div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eligendi nobis ea maiores sapiente veritatis reprehenderit suscipit quaerat rerum voluptatibus a eius.</p>
+            <a href="https://larepublica.pe/sociedad/1478520-telesup-sunedu-niega-licenciamiento-universidad-privada-ley-universitaria" target="_blank"><img src="images/55.jpg" alt="Image" class="img-fluid"></a>
+              <h2 class="font-size-regular"><p>Licenciamiento denegado: Telesup</p></h2>
+              <div class="meta mb-4">El mes pasado<span class="mx-2">&bullet;</span> Mayo 31, 2019<span class="mx-2">&bullet;</span> <a href="https://larepublica.pe/sociedad/1478520-telesup-sunedu-niega-licenciamiento-universidad-privada-ley-universitaria" target="_blank">La República</a></div>
+              <p>Por una serie de deficiencias relacionadas a infraestructura, plana docente y planes de estudio e investigación, la Universidad Privada Telesup –conocida por ser de propiedad del excongresista de Solidaridad Nacional, José Luna– deberá cerrar en los próximos dos años, como máximo, tras la denegatoria de su licenciamiento.</p>
             </div>
           </div>
         </div>

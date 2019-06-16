@@ -9,19 +9,19 @@
                         <div class="myform form ">
                         <div class="logo mb-3">
 						 <div class="col-md-12 text-center">
-							<h1>Perfil</h1>
+							<h1 style="color:blue">Perfil</h1>
 						 </div>
                     </div>
                     <br>
 
                            <div class="form-group">
-                           <H5 style="text-transform: capitalize;">Nombre: {{session('user_name')}}</H5>
+                           <H5 style="text-transform: capitalize;"> <b>Nombre: </b>{{session('user_name')}}</H5>
                            </div>
                            <div class="form-group">
-                           <H5 >Correo: {{$datos->correo}}</H5>
+                           <H5 ><b>Correo:</b>  {{$datos->correo}}</H5>
                            </div>
                            <div class="form-group">
-                           <H5 >Edad: </H5>
+                           <H5 ><b>Fecha de nacimiento: </b>  {{$datos->fecha_nacimiento}}</H5>
                            </div>
                            <br>
                            <div class="col-md-12 text-center ">

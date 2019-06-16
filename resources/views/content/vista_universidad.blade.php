@@ -78,12 +78,13 @@
               </div>
 
               <div class="row justify-content-center mb-5">
-                <div class="col-md-7 text-center border-primary">
-                  <h2 class="font-weight-light text-primary">Comentarios</h2>
-                  <p class="color-black-opacity-5">Comentarios respecto a la información de la universidad</p>
-                </div>
-              </div>
+                      <div class="col-md-7 text-center border-primary">
+                        <h2 class="font-weight-light text-primary">Comentarios</h2>
+                      </div>
+                    </div>
+              
 
+              
               @foreach($valoraciones as $valo)
                 <center>
                   <div class="col-md-7" style="text-align: left;">
@@ -99,8 +100,8 @@
                   <div class="site-section bg-light">
                     <div class="row justify-content-center mb-5">
                       <div class="col-md-7 text-center border-primary">
-                        <h2 class="font-weight-light text-primary">Escribe tu opinión sobre la universidad</h2>
-                        <p class="color-black-opacity-5">Realiza tu valoración</p>
+                        <h2 class="font-weight-light text-primary">Escribe tu impresión sobre la universidad</h2>
+                        <p class="color-black-opacity-5">Se partícipe de una lluvia de opiniones</p>
                       </div>
                     </div>
                     <div class="container ">
