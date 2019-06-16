@@ -60,6 +60,7 @@ Route::get('admin/universidades',function(){
 	return view('admin_content.universidades_admin');
 })->name('universidades');
 
+
 Route::get('admin/noticias',function(){
 	return view('admin_content.noticias_admin');
 })->name('noticias');

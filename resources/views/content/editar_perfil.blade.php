@@ -9,7 +9,7 @@
             <form class="form-signin" method="post" action="{{route('new',$datos_user->id)}}">
     			     {{ csrf_field() }}
               <div class="form-label-group">
-                <input type="text" id="nombre" name="new_correo" class="form-control" placeholder="Nombre"  name="nombre"  required>
+                <input type="text" id="nombre" name="new_correo" class="form-control" placeholder="Nombre"  name="nombre" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" required>
                 <label for="nombre">{{$datos_user->correo}}</label>
               </div>  
               <div class="form-label-group">
