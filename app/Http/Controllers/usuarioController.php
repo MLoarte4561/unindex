@@ -92,8 +92,9 @@ class usuarioController extends Controller
 
         return redirect('/perfil');
 
-
     }
+
+
 
 
     public function logout()

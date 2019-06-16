@@ -22,10 +22,22 @@
                 <div class="box-header with-border">
                 </div><!-- /.box-header -->
                 <div class="box-body">
-                  <form role="form" action="#"  files="true" enctype="multipart/form-data">
+                  <form role="form" action="{{route('insert_universidad')}}"  method="post">
                     {{csrf_field()}}
                     <!-- text input -->
                     <div class="form-row">
+                          
+
+                      <div class="form-group col-md-12">
+                        @if(Session::has('message'))
+                            <div class="form-group">
+                              <div class="alert alert-primary" role="alert">
+                                {{Session('message')}}
+                              </div>
+                            </div>
+                          @endif
+                      </div>    
+
                       <div class="form-group col-md-6">
                         <label>Nombre</label>
                         <input type="text" class="form-control" name="nombre_uni" placeholder="Nombre de la universidad">
@@ -67,8 +79,8 @@
                       <textarea type="text" class="form-control" name="acerca_uni" placeholder="Ingrese una breve descripción"></textarea>
                     </div>
                     <div class="custom-file">
-                      <input id="img" class="custom-file-input" data-input="false" type="file" data-buttonText="Upload Logo" data-size="sm" data-badge="false" onchange="uploadImage();" name="imagen" />
-                      <label class="custom-file-label" for="imagen"></label>
+                      <label>Link de imagen referencial</label>
+                      <input type="text" class="form-control" name="imagen_uni" placeholder="link" required>
                     </div>
                     <hr>
 

@@ -42,11 +42,6 @@ Route::post('/registrar','usuarioController@registrar');
 
 
 /* --------------------- Administrador ------------------------*/
-Route::get('admin',function(){
-	return view('admin_content.login_admin');
-})->name('login_admin');
-
-Route::post('admin','adminController@loginAdm')->name('log');
 
 
 Route::get('admin/home','adminController@index')->name('admin');
@@ -55,15 +50,18 @@ Route::get('admin/usuarios','adminController@getUsuarios')->name('usuarios');
 
 Route::get('admin/sugerencias','adminController@getSugerencias')->name('sugerencias');
 
+Route::get('admin/listado','adminController@getUniversidades')->name('listUni');
+Route::post('admin/listado/delete/{id}','adminController@eliminarUni')->name('listUniDelete');
+Route::post('admin/listado/{id}','adminController@updateUniversidades')->name('listUniUp');
+
+
+
 
 Route::get('admin/universidades',function(){
 	return view('admin_content.universidades_admin');
 })->name('universidades');
 
-
-Route::get('admin/noticias',function(){
-	return view('admin_content.noticias_admin');
-})->name('noticias');
+Route::post('admin/universidades','adminController@insertUniversidad')->name('insert_universidad');
 
 Route::get('/logout','usuarioController@logout')->name('logout');
 

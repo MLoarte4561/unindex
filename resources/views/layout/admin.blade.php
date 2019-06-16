@@ -6,6 +6,7 @@
     <title>UNINDEX ADMIN | Panel de Control</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
     <!-- Bootstrap 3.3.5 -->
     <link rel="stylesheet" href="{{URL::asset('css/bootstrap.min.css')}}">
     <!-- Font Awesome -->
@@ -41,7 +42,7 @@
     <div class="wrapper">
         <header class="main-header">
             <!-- Logo -->
-            <a href="index2.html" class="logo">
+            <a href="{{route('admin')}}" class="logo">
               <!-- mini logo for sidebar mini 50x50 pixels -->
               <span class="logo-mini"><b>U </b>admin</span>
               <!-- logo for regular state and mobile devices -->
@@ -119,23 +120,18 @@
                   <i class="fa fa-dashboard"></i> <span>Panel de Control</span> <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="{{route('admin')}}"><i class="fa fa-circle-o"></i>Inicio</a></li>
+                  <li><a href="{{route('admin')}}"><i class="fa fa-circle-o"></i>Inicio</a></li>
                   <li><a href="{{route('usuarios')}}"><i class="fa fa-circle-o"></i>Usuarios</a></li>
                   <li><a href="{{route('sugerencias')}}"><i class="fa fa-circle-o"></i>Sugerencias</a></li>
+                  <li><a href="{{route('listUni')}}"><i class="fa fa-circle-o"></i>Universidades</a></li>
                 </ul>
-              </li>
-
-                  <li>
+              </li>    <li>
                         <a href="{{route('universidades')}}">
-                          <i class="fa fa-edit"></i> <span>Actualizar Universidades</span>
+                          <i class="fa fa-edit"></i> <span>Agregar universidad</span>
                         </a>
                       </li>
 
-                      <li>
-                            <a href="{{route('noticias')}}">
-                              <i class="fa fa-edit"></i> <span>Actualizar Noticias</span>
-                            </a>
-                          </li>
+                    
 
              
             </ul>
@@ -149,7 +145,7 @@
       @yield('ad_usuarios')
       @yield('ad_sugerencias')
       @yield('ad_universidades')
-      @yield('ad_noticias')
+      @yield('listUni')
 
       <!-- Add the sidebar's background. This div must be placed
            immediately after the control sidebar -->
