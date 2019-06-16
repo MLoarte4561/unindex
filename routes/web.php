@@ -32,6 +32,12 @@ Route::get('/nosotros', function(){
 	return view('content.nosotros');
 })->name('nosotros');
 
+Route::get('/test', function(){
+	return view('content.test');
+})->name('test');
+
+Route::post('/test','usuarioController@enviarTest')->name('enviarTest');
+
 Route::get('/login','usuarioController@index')->name('login');
 
 Route::post('/login','usuarioController@login')->name('loginuser');
@@ -39,6 +45,7 @@ Route::post('/login','usuarioController@login')->name('loginuser');
 Route::get('/registrar','usuarioController@index_registro')->name('registrar');
 
 Route::post('/registrar','usuarioController@registrar');
+
 
 
 /* --------------------- Administrador ------------------------*/
