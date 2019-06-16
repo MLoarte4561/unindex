@@ -44,9 +44,13 @@ class adminController extends Controller
     }
 
     public function getSugerencias(){
-        $user = User::first()->sugerencia;
+        $users = User::all();
+        //dd($user);
+        //return view('admin_content.sugerencias_admin',compact('user'));
+        //return view('admin_content.sugerencias_admin',compact('user'));
+        return view('admin_content.sugerencias_admin')
+        ->with('users',$users);
 
-        return view('admin_content.sugerencias_admin',compact('user'));
     }
 
     

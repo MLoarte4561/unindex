@@ -21,8 +21,9 @@
           
 
           <div class="row">
+            @foreach($users as $su)
+            @if(isset($su->sugerencias[0]))
 
-            @foreach($user as $su)
             <div class="col-md-6">
               <!-- Box Comment -->
               <div class="box box-widget">
@@ -38,17 +39,19 @@
                 <div class='box-body'>
                   <!-- post text -->
                   
+                  @for($i=0;$i<100;$i++)
+                  @if(isset($su->sugerencias[$i]))
+                  <span>* {{$su->sugerencias[$i]['descripcion']}}</span><br>
+                  @endif
+                  @endfor
                 </div><!-- /.box-body -->
                 <div class="box-footer">
 
                 </div><!-- /.box-footer -->
               </div><!-- /.box -->
             </div><!-- /.col -->
-
+          @endif
           @endforeach
-           
-
-
           </div><!-- /.row -->
 
         </section><!-- /.content -->
