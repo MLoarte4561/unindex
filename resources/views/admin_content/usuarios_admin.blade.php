@@ -25,9 +25,14 @@
                     @else
                     <h5 class="widget-user-desc">Administrador</h5>
                     @endif
+                    {{$users->correo}}
                   </div>
                   <div class="box-footer">
-                    {{$users->correo}}
+                     @for($i=0;$i<20;$i++)
+                      @if(isset($su->sugerencias[$i]))
+                      <span>* {{$su->sugerencias[$i]['descripcion']}}</span><br>
+                      @endif
+                    @endfor
                   </div>
                 </div><!-- /.widget-user -->
               </div><!-- /.col -->

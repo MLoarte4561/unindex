@@ -11,4 +11,8 @@ class Sugerencia extends Eloquent
     protected $collection = 'usuario';
 
     protected $fillables = ['descripcion']; 
+
+    public function user(){
+    	return $this->belongsTo(Usuario::class);
+    }
 }

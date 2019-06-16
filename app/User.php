@@ -15,6 +15,8 @@ class User extends Eloquent
     public function sugerencia(){
 
     	return $this->embedsMany('App\Sugerencia');
+    	//return $this->hasMany(Sugerencia::class);
+
     	
     }
 }
