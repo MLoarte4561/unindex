@@ -54,7 +54,7 @@
               @endif
 
 				      <div class="form-label-group">
-                <input type="date" id="fecha" class="form-control" placeholder="Fecha de Nacimiento" name="fecha" required max="2007-01-01">
+                <input type="date" id="fecha" class="form-control" placeholder="Fecha de Nacimiento" name="fecha" required min="1997-12-31" max="2007-01-01">
                 <label for="fecha">Fecha de Nacimiento</label>
               </div>
 

@@ -17,7 +17,7 @@
         <!-- small box -->
         <div class="small-box bg-aqua">
           <div class="inner">
-            <h3>{{$sugerencias}}</h3>
+            <h3>{{$cant_sug}}</h3>
             <p>Sugerencias al sistema</p>
           </div>
           <div class="icon">

@@ -9,11 +9,11 @@
             <form class="form-signin" method="post" action="{{route('new',$datos_user->id)}}">
     			     {{ csrf_field() }}
               <div class="form-label-group">
-                <input type="text" id="nombre" name="new_correo" class="form-control" placeholder="Nombre"  name="nombre"  required>
+                <input type="text" id="nombre" name="new_correo" class="form-control" placeholder="Nombre"  name="nombre" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" required>
                 <label for="nombre">{{$datos_user->correo}}</label>
               </div>  
               <div class="form-label-group">
-                <input type="password" id="inputPassword"  name="new_pass" class="form-control" placeholder="Nueva contraseña" name="contrasenia" required>
+                <input type="password" id="inputPassword"  name="new_pass" class="form-control" placeholder="Nueva contraseña" name="contrasenia" required pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}">
                 <label for="inputPassword">Nueva contraseña</label>
               </div>           
               <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Actualizar</button>

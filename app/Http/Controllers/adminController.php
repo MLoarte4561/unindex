@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Input;
+
 use Illuminate\Http\Request;
 
 use App\User;
 use App\Universidades;
 use App\Valoracion;
 use App\Sugerencia;
+
 
 class adminController extends Controller
 {
@@ -23,12 +26,14 @@ class adminController extends Controller
         $users = User::count();
         $universidades = Universidades::count();
         $valoraciones = Valoracion::count(); 
-        $sugerencias = Sugerencia::count();
+        $sugerencias = User::first()->sugerencia;
+        $cant_sug = count($sugerencias);
+                    
 
         //Datos de los usuario
         $usuarios = User::orderBy('nombre')->paginate(12);
 
-        return view('admin_content.index_admin',compact('users','universidades','valoraciones','sugerencias','usuarios'));
+        return view('admin_content.index_admin',compact('users','universidades','valoraciones','cant_sug','usuarios'));
     }
 
     
@@ -43,4 +48,7 @@ class adminController extends Controller
 
         return view('admin_content.sugerencias_admin',compact('user'));
     }
+
+    
+    
 }

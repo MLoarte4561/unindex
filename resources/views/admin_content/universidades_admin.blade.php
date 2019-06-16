@@ -22,7 +22,7 @@
                 <div class="box-header with-border">
                 </div><!-- /.box-header -->
                 <div class="box-body">
-                  <form role="form" action="#" method="post" files="true" enctype="multipart/form-data">
+                  <form role="form" action="#"  files="true" enctype="multipart/form-data">
                     {{csrf_field()}}
                     <!-- text input -->
                     <div class="form-row">
@@ -40,7 +40,7 @@
                     <div class="form-row">
                       <div class="form-group col-md-6">
                           <label>Teléfono</label>
-                          <input type="text" class="form-control" name="telefono_uni" placeholder="Teléfono" required>  
+                          <input type="number" class="form-control" name="telefono_uni" placeholder="Teléfono" required>  
                       </div>
                       <div class="form-group col-md-6">
                           <label>Distrito</label>
@@ -55,7 +55,7 @@
                       </div>
                       <div class="form-group col-md-6">
                           <label>Correo</label>
-                          <input type="text" class="form-control" name="correo_uni" placeholder="Correo electrónico" required>  
+                          <input type="email" class="form-control" name="correo_uni" placeholder="Correo electrónico" required>  
                       </div>
                     </div>
                     <div class="form-group">
@@ -67,8 +67,8 @@
                       <textarea type="text" class="form-control" name="acerca_uni" placeholder="Ingrese una breve descripción"></textarea>
                     </div>
                     <div class="custom-file">
-                      <input type="file" class="custom-file-input" id="customFileLang" lang="es">
-                      <label class="custom-file-label" for="customFileLang">Seleccionar Archivo</label>
+                      <input id="img" class="custom-file-input" data-input="false" type="file" data-buttonText="Upload Logo" data-size="sm" data-badge="false" onchange="uploadImage();" name="imagen" />
+                      <label class="custom-file-label" for="imagen"></label>
                     </div>
                     <hr>
 
