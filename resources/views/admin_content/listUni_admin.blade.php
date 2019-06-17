@@ -80,7 +80,7 @@
                     <div class="form-row">
                       <div class="form-group col-md-6">
                           <label>Teléfono</label>
-                          <input type="number" class="form-control" name="telefono_uni_new" placeholder="{{$universidad->telefono}}" required>  
+                          <input type="text" class="form-control" name="telefono_uni_new" placeholder="{{$universidad->telefono}}" required>  
                       </div>
                       <div class="form-group col-md-6">
                           <label>Distrito</label>

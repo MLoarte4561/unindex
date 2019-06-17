@@ -52,7 +52,7 @@
                     <div class="form-row">
                       <div class="form-group col-md-6">
                           <label>Teléfono</label>
-                          <input type="number" class="form-control" name="telefono_uni" placeholder="Teléfono" required min="0">  
+                          <input type="text" class="form-control" name="telefono_uni" placeholder="Teléfono" required pattern="[A-Za-z0-9()-]">  
                       </div>
                       <div class="form-group col-md-6">
                           <label>Distrito</label>
