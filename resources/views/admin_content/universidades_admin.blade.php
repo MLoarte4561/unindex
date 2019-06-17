@@ -40,7 +40,7 @@
 
                       <div class="form-group col-md-6">
                         <label>Nombre</label>
-                        <input type="text" class="form-control" name="nombre_uni" placeholder="Nombre de la universidad" pattern="[A-Za-z áéíóúñÜü]+">
+                        <input type="text" class="form-control" name="nombre_uni" placeholder="Nombre de la universidad">
                       </div>
                       <div class="form-group col-md-6">
                           <label>Dirección</label>
@@ -76,7 +76,7 @@
                     </div>
                     <div class="form-group" >
                       <label>Acerca de la universidad</label>
-                      <textarea type="text" class="form-control" name="acerca_uni" placeholder="Ingrese una breve descripción"></textarea>
+                      <textarea type="text" class="form-control" name="acerca_uni" required placeholder="Ingrese una breve descripción"></textarea>
                     </div>
                     <div class="custom-file">
                       <label>Link de imagen referencial</label>

@@ -38,7 +38,8 @@
               @foreach($universidad as $uni)
               <div class="col-md-9 col-lg-4 mb-4 mb-lg-3">
                 <div class="h-entry">
-                  <a href="{{action('universidadesController@getUniversidad',$uni->nombre)}}"><img src="{{$uni -> imagen}}" alt="Image" class="img-fluid" ></a>
+                  <a href="{{action('universidadesController@getUniversidad',$uni->nombre)}}"><img src="{{$uni -> imagen}}" style="width: 459px; 
+                  height: 290px;" alt="Image" class="img-fluid" ></a> 
                   <h2 class="font-size-regular"><a href="{{action('universidadesController@getUniversidad',$uni->nombre)}}">{{$uni -> nombre}}</a></h2>
                   <div class="meta mb-4">Distrito: {{$uni->distrito}} </div>
                 </div> 
