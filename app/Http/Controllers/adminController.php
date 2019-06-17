@@ -6,15 +6,15 @@ use Illuminate\Support\Facades\Input;
 
 use Illuminate\Http\Request;
 
-
-use Session;
-use Redirect;
+use MongoDB\BSON\ObjectID;
 
 use App\User;
 use App\Universidades;
 use App\Valoracion;
 use App\Sugerencia;
 
+use Redirect;
+use Session;
 
 class adminController extends Controller
 {
@@ -109,5 +109,57 @@ class adminController extends Controller
 
         return redirect('/admin/listado');
     }
+
+    //Carreras----------------------------------------------------*****
+
+    public function carreras(){
+        $car = Universidades::orderBy('nombre')->get();
+
+        return view('admin_content.carreras_admin',compact('car'));
+    }
+
+    public function getCarreras($nombre, Request $req){
+
+        if($nombre == 'buscar_car'){
+            $nombre = $req->get('carreras');
+        }
+
+        $carreras = Universidades::where('nombre',$nombre)->first()->carreras;
+
+        return view('admin_content.carreras_admin2',compact('carreras','nombre')); 
+    }
+
+    public function insertCarreras(Request $request, $nombre){
+        $univ = Universidades::where('nombre',$nombre);
+        $nombres = $request->input('nombre_new');
+        $descripcion = $request->input('desc_new');
+        $web = $request->input('url_new');
+        $id = new ObjectID();
+        $arrModel[] = [
+            '_id'=>$id,
+            'nombres' => $nombres,
+            'descripcion' => $descripcion,
+            'web'=>$web
+        ];
+        $univ->push('carreras', $arrModel);
+
+        Session::flash('message','Carrera registrada correctamente');
+        return redirect('/admin/carreras');
+
+    }
+
+    public function deleteCarrera($id){
+
+        $uni = Universidades::select('_id','carreras.$')->where('carreras._id',$id)->first();
+        $carrera = $uni->carreras()->first();
+        $carrera->delete();
+
+        Session::flash('message2','Carrera eliminada correctamente');
+        return redirect('/admin/carreras');
+    }    
+
+
+
+
     
 }

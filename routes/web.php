@@ -61,7 +61,11 @@ Route::get('admin/listado','adminController@getUniversidades')->name('listUni');
 Route::post('admin/listado/delete/{id}','adminController@eliminarUni')->name('listUniDelete');
 Route::post('admin/listado/{id}','adminController@updateUniversidades')->name('listUniUp');
 
+Route::get('admin/carreras','adminController@carreras')->name('carreras');
 
+Route::post('admin/carreras/{nombre}','adminController@getCarreras')->name('carreras_get');
+Route::post('admin/carreras/insert/{nombre}','adminController@insertCarreras')->name('carreras_insert');
+Route::post('admin/carreras/delete/{nombre}','adminController@deleteCarrera')->name('carreras_delete');
 
 
 Route::get('admin/universidades',function(){

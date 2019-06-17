@@ -37,7 +37,7 @@
     			     {{ csrf_field() }}
               <div class="form-label-group">
                 <input type="text" id="nombre" class="form-control" placeholder="Nombre"  name="nombre" required pattern="[A-Za-z]+">
-                <label for="nombre" >Nombre de usuario</label>
+                <label for="nombre" >Nombre</label>
               </div>
 
                 <div class="form-label-group">

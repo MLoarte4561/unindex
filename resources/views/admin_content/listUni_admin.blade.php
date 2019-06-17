@@ -127,7 +127,7 @@
           <div class="modal-content">
             <div class="modal-header" >
               <h5 class="modal-title ">
-                center
+                {{$univ->nombre}}
               </h5>
             </div>
             <div class="modal-body">

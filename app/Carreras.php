@@ -10,5 +10,5 @@ class Carreras extends Eloquent
     protected $connection = 'mongodb';
 	protected $collection = 'universidades';
 
-	protected $fillables = ['nombres','descripcion','curricula'];
+	protected $fillables = ['_id','nombres','descripcion','curricula'];
 }

@@ -40,7 +40,7 @@
                 del instituto tecnológico superior Tecsup. </p>
           </div>
           <div class="col-md-6 col-lg-3 mb-4 mb-lg-0 mt-md-5">
-            <img src="images/person_4.jpg" alt="Image" class="img-fluid mb-3">
+            <img src="images/moises.jpg" alt="Image" class="img-fluid mb-3">
             <h3 class="h4">Moisés Loarte</h3>
             <p class="caption text-primary">Programador</p>
           </div>

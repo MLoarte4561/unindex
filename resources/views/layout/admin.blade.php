@@ -125,11 +125,17 @@
                   <li><a href="{{route('sugerencias')}}"><i class="fa fa-circle-o"></i>Sugerencias</a></li>
                   <li><a href="{{route('listUni')}}"><i class="fa fa-circle-o"></i>Universidades</a></li>
                 </ul>
-              </li>    <li>
-                        <a href="{{route('universidades')}}">
-                          <i class="fa fa-edit"></i> <span>Agregar universidad</span>
-                        </a>
-                      </li>
+              </li>    
+              <li>
+                <a href="{{route('universidades')}}">
+                  <i class="fa fa-edit"></i> <span>Agregar universidad</span>
+                </a>
+              </li>
+              <li>
+                <a href="{{route('carreras')}}">
+                  <i class="fa fa-edit"></i><span>Gestionar carreras</span>
+                </a>
+              </li>
 
                     
 
@@ -145,6 +151,7 @@
       @yield('ad_usuarios')
       @yield('ad_sugerencias')
       @yield('ad_universidades')
+      @yield('ad_carreras')
       @yield('listUni')
 
       <!-- Add the sidebar's background. This div must be placed

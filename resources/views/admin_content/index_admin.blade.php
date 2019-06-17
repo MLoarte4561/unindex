@@ -13,19 +13,7 @@
   <section class="content">
     <!-- Small boxes (Stat box) -->
     <div class="row">
-      <div class="col-lg-3 col-xs-6">
-        <!-- small box -->
-        <div class="small-box bg-aqua">
-          <div class="inner">
-            <h3>{{$cant_sug}}</h3>
-            <p>Sugerencias al sistema</p>
-          </div>
-          <div class="icon">
-            <i class="ion ion-bag"></i>
-          </div>
-        </div>
-      </div><!-- ./col -->
-      <div class="col-lg-3 col-xs-6">
+      <div class="col-lg-4 col-xs-6">
         <!-- small box -->
         <div class="small-box bg-green">
           <div class="inner">
@@ -37,7 +25,7 @@
           </div>
         </div>
       </div><!-- ./col -->
-      <div class="col-lg-3 col-xs-6">
+      <div class="col-lg-4 col-xs-6">
         <!-- small box -->
         <div class="small-box bg-yellow">
           <div class="inner">
@@ -49,12 +37,12 @@
           </div>
         </div>
       </div><!-- ./col -->
-      <div class="col-lg-3 col-xs-6">
+      <div class="col-lg-4 col-xs-6">
         <!-- small box -->
         <div class="small-box bg-red">
           <div class="inner">
             <h3>{{$valoraciones}}</h3>
-            <p>Valoraciones a universidades</p>
+            <p>Comentarios a universidades</p>
           </div>
           <div class="icon">
             <i class="ion ion-pie-graph"></i>

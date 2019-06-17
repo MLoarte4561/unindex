@@ -30,11 +30,6 @@
                 <div class='box-header with-border'>  
                     <span class='username'>{{$su->nombre}}</span><br>
                     <span class='description'>{{$su->correo}}</span>
-                  <div class='box-tools'>
-                    <button class='btn btn-box-tool' data-toggle='tooltip' title='Mark as read'><i class='fa fa-circle-o'></i></button>
-                    <button class='btn btn-box-tool' data-widget='collapse'><i class='fa fa-minus'></i></button>
-                    <button class='btn btn-box-tool' data-widget='remove'><i class='fa fa-times'></i></button>
-                  </div><!-- /.box-tools -->
                 </div><!-- /.box-header -->
                 <div class='box-body'>
                   <!-- post text -->
@@ -45,9 +40,7 @@
                   @endif
                   @endfor
                 </div><!-- /.box-body -->
-                <div class="box-footer">
-
-                </div><!-- /.box-footer -->
+                
               </div><!-- /.box -->
             </div><!-- /.col -->
           @endif
