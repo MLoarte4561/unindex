@@ -159,6 +159,20 @@ class adminController extends Controller
     }    
 
 
+    public function updateCarrera(Request $request, $id)
+    {   
+        $universidad = Universidades::select('_id','carreras.$')->where('carreras._id',$id)->first();
+        $carre = $universidad->carreras()->first();
+        $carre->nombres = $request->get('car_nombre_new');
+        $carre->descripcion = $request->get('car_web_new');
+        $carre->curricula = $request->get('car_desc_new');
+
+        $carre->save();
+        Session::flash('message3','Carrera actualizada correctamente');
+        return redirect("/admin/carreras")->with('success', 'Model has been successfully update');
+    }
+
+
 
 
     

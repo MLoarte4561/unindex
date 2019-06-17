@@ -68,17 +68,17 @@
                             </h5>
                           </div>
                           <div class="modal-body">
-                            <form role="form" action=""  method="post">
+                            <form role="form" action="{{route('carreras_update',$carr->_id)}}"  method="post">
                               {{csrf_field()}}
                               <!-- text input -->
                               <div class="form-row">
                                 <div class="form-group col-md-6">
                                   <label>Nombre</label>
-                                  <input type="text" class="form-control" name="nombre_new" placeholder="{{$carr->nombres}}">
+                                  <input type="text" class="form-control" name="car_nombre_new" placeholder="{{$carr->nombres}}">
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label>Link de plan de estudios</label>
-                                    <input type="text" class="form-control" name="web_new" placeholder="{{$carr->curricula}}" required>  
+                                    <input type="text" class="form-control" name="car_web_new" placeholder="{{$carr->curricula}}" required>  
                                 </div>
 
                               </div>
@@ -86,7 +86,7 @@
                               <div class="form-row">
                                 <div class="form-group col-md-12">
                                     <label>Descripción</label>
-                                    <textarea type="text" class="form-control" name="desc_new" placeholder="{{$carr->descripcion}}" required></textarea>
+                                    <textarea type="text" class="form-control" name="car_desc_new" placeholder="{{$carr->descripcion}}" required></textarea>
                                 </div>
                               </div>
                               <hr>

@@ -66,6 +66,7 @@ Route::get('admin/carreras','adminController@carreras')->name('carreras');
 Route::post('admin/carreras/{nombre}','adminController@getCarreras')->name('carreras_get');
 Route::post('admin/carreras/insert/{nombre}','adminController@insertCarreras')->name('carreras_insert');
 Route::post('admin/carreras/delete/{nombre}','adminController@deleteCarrera')->name('carreras_delete');
+Route::post('admin/carreras/update/{nombre}','adminController@updateCarrera')->name('carreras_update');
 
 
 Route::get('admin/universidades',function(){

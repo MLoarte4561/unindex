@@ -57,6 +57,13 @@
                       </div>
                     </div>
                   @endif
+                  @if(Session::has('message3'))
+                    <div class="form-group">
+                      <div class="alert alert-danger" role="alert">
+                        {{Session('message3')}}
+                      </div>
+                    </div>
+                  @endif
                 </div><!-- /.box-body -->
               </div><!-- /.box -->
             </div><!--/.col (right) -->

@@ -36,7 +36,7 @@
             <form class="form-signin" method="post" action="{{url('registrar')}}">
     			     {{ csrf_field() }}
               <div class="form-label-group">
-                <input type="text" id="nombre" class="form-control" placeholder="Nombre"  name="nombre" required pattern="[A-Za-z]+">
+                <input type="text" id="nombre" class="form-control" placeholder="Nombre"  name="nombre" required pattern="[A-Za-z áéíóúñÜü]+">
                 <label for="nombre" >Nombre</label>
               </div>
 

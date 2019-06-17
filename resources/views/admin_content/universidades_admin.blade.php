@@ -40,7 +40,7 @@
 
                       <div class="form-group col-md-6">
                         <label>Nombre</label>
-                        <input type="text" class="form-control" name="nombre_uni" placeholder="Nombre de la universidad">
+                        <input type="text" class="form-control" name="nombre_uni" placeholder="Nombre de la universidad" pattern="[A-Za-z áéíóúñÜü]+">
                       </div>
                       <div class="form-group col-md-6">
                           <label>Dirección</label>
@@ -52,18 +52,18 @@
                     <div class="form-row">
                       <div class="form-group col-md-6">
                           <label>Teléfono</label>
-                          <input type="number" class="form-control" name="telefono_uni" placeholder="Teléfono" required>  
+                          <input type="number" class="form-control" name="telefono_uni" placeholder="Teléfono" required min="0">  
                       </div>
                       <div class="form-group col-md-6">
                           <label>Distrito</label>
-                          <input type="text" class="form-control" name="distrito_uni" placeholder="Distrito" required>  
+                          <input type="text" class="form-control" name="distrito_uni" placeholder="Distrito" required pattern="[A-Za-z áéíóúñÜü]+">  
                       </div>
                     </div>
 
                     <div class="form-row">
                       <div class="form-group col-md-6">
                           <label>Tipo</label>
-                          <input type="text" class="form-control" name="tipo_uni" placeholder="¿Privada o pública?" required>  
+                          <input type="text" class="form-control" name="tipo_uni" placeholder="¿Privada o pública?" required pattern="[A-Za-z áéíóúñÜü]+">  
                       </div>
                       <div class="form-group col-md-6">
                           <label>Correo</label>
