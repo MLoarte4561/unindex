@@ -2,19 +2,6 @@
 
 @section('inicio')
 
-<div
-id="botcopy-embedder-d7lcfheammjct"
-class="botcopy-embedder-d7lcfheammjct" 
-data-botId="5e7f808240d9580007a306cf"
->
-  <script type="text/javascript">
-    var s = document.createElement('script'); 
-    s.type = 'text/javascript'; s.async = true; 
-    s.src = 'https://widget.botcopy.com/js/injection.js'; 
-    document.getElementById('botcopy-embedder-d7lcfheammjct').appendChild(s);
-  </script>
-</div>
-
 <div class="site-blocks-cover overlay" style="background-image:  url(images/1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="container">
         <div class="row align-items-center justify-content-center text-center">
